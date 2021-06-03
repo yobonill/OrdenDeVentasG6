@@ -1,0 +1,10 @@
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.csprojAssemblyReference.cache
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.LogIn.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Properties.Resources.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.csproj.GenerateResource.cache
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\prj_Presentacion.exe.config
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\prj_Presentacion.exe
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\prj_Presentacion.pdb
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.exe
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.pdb

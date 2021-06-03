@@ -10,11 +10,26 @@ using System.Windows.Forms;
 
 namespace prj_Presentacion
 {
-    public partial class Form1 : Form
+    public partial class LogIn : Form
     {
-        public Form1()
+        public LogIn()
         {
             InitializeComponent();
+        }
+
+        private void LogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pass_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void submit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
