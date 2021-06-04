@@ -1,0 +1,8 @@
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\bin\Debug\Prj_Entidades.exe
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\bin\Debug\Prj_Entidades.pdb
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\obj\Debug\Prj_Entidades.Properties.Resources.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\obj\Debug\Prj_Entidades.csproj.GenerateResource.cache
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\obj\Debug\Prj_Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\obj\Debug\Prj_Entidades.exe
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\obj\Debug\Prj_Entidades.pdb
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Entidades\obj\Debug\Prj_Entidades.csprojAssemblyReference.cache
