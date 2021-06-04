@@ -63,7 +63,7 @@ namespace prj_Presentacion
             this.tb_pass.MinimumSize = new System.Drawing.Size(344, 40);
             this.tb_pass.Name = "tb_pass";
             this.tb_pass.PasswordChar = '*';
-            this.tb_pass.Size = new System.Drawing.Size(344, 40);
+            this.tb_pass.Size = new System.Drawing.Size(344, 38);
             this.tb_pass.TabIndex = 2;
             this.tb_pass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -73,7 +73,7 @@ namespace prj_Presentacion
             this.tb_user.Location = new System.Drawing.Point(210, 227);
             this.tb_user.MinimumSize = new System.Drawing.Size(344, 40);
             this.tb_user.Name = "tb_user";
-            this.tb_user.Size = new System.Drawing.Size(344, 40);
+            this.tb_user.Size = new System.Drawing.Size(344, 38);
             this.tb_user.TabIndex = 1;
             this.tb_user.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -154,7 +154,7 @@ namespace prj_Presentacion
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(540, 479);
+            this.label2.Location = new System.Drawing.Point(540, 482);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 25);
             this.label2.TabIndex = 11;

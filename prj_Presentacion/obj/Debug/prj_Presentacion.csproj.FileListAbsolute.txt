@@ -8,3 +8,11 @@ C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\Practi
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\prj_Presentacion.pdb
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.exe
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.pdb
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Entidades.exe
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Logica.exe
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Entidades.pdb
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Logica.pdb
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.csproj.CopyComplete
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Datos.exe
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Datos.pdb
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.mainMenu.resources
