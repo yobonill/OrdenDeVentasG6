@@ -16,5 +16,19 @@ namespace prj_Presentacion
         {
             InitializeComponent();
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            mainMenu cargar = new mainMenu();
+            cargar.ShowDialog();
+        }
+
+        private void usersButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SettingsUser cargar = new SettingsUser();
+            cargar.ShowDialog();
+        }
     }
 }
