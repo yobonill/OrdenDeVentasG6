@@ -46,5 +46,42 @@ namespace prj_Presentacion
         {
 
         }
+
+        private void backButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnBuscar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnLimpiar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnNuevo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRoles_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Settings cargar = new Settings();
+            cargar.ShowDialog();
+        }
     }
 }

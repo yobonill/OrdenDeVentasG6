@@ -17,3 +17,8 @@ C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\Practi
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Datos.pdb
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.mainMenu.resources
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Settings.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Reports.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsArticles.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsPersonas.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsUser.resources
+C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Shop.resources

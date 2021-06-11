@@ -30,5 +30,19 @@ namespace prj_Presentacion
             SettingsUser cargar = new SettingsUser();
             cargar.ShowDialog();
         }
+
+        private void BtnArticle_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SettingsArticles cargar = new SettingsArticles();
+            cargar.ShowDialog();
+        }
+
+        private void BtnPerson_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SettingsPersonas cargar = new SettingsPersonas();
+            cargar.ShowDialog();
+        }
     }
 }

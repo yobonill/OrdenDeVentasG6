@@ -32,7 +32,9 @@ namespace prj_Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.usersButton = new System.Windows.Forms.Button();
+            this.BtnPerson = new System.Windows.Forms.Button();
+            this.BtnArticle = new System.Windows.Forms.Button();
+            this.BtnUsers = new System.Windows.Forms.Button();
             this.backButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -76,25 +78,65 @@ namespace prj_Presentacion
             this.label1.TabIndex = 27;
             this.label1.Text = "Configuraciones";
             // 
-            // usersButton
+            // BtnPerson
             // 
-            this.usersButton.BackColor = System.Drawing.Color.MidnightBlue;
-            this.usersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.usersButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.usersButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
-            this.usersButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.usersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.usersButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usersButton.ForeColor = System.Drawing.Color.White;
-            this.usersButton.Image = global::prj_Presentacion.Properties.Resources.user_64;
-            this.usersButton.Location = new System.Drawing.Point(148, 124);
-            this.usersButton.Name = "usersButton";
-            this.usersButton.Size = new System.Drawing.Size(277, 166);
-            this.usersButton.TabIndex = 26;
-            this.usersButton.Text = "Usuarios";
-            this.usersButton.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.usersButton.UseVisualStyleBackColor = false;
-            this.usersButton.Click += new System.EventHandler(this.usersButton_Click);
+            this.BtnPerson.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnPerson.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnPerson.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnPerson.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnPerson.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnPerson.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPerson.ForeColor = System.Drawing.Color.White;
+            this.BtnPerson.Image = global::prj_Presentacion.Properties.Resources.clients;
+            this.BtnPerson.Location = new System.Drawing.Point(359, 327);
+            this.BtnPerson.Name = "BtnPerson";
+            this.BtnPerson.Size = new System.Drawing.Size(277, 166);
+            this.BtnPerson.TabIndex = 29;
+            this.BtnPerson.Text = "Personas";
+            this.BtnPerson.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnPerson.UseVisualStyleBackColor = false;
+            this.BtnPerson.Click += new System.EventHandler(this.BtnPerson_Click);
+            // 
+            // BtnArticle
+            // 
+            this.BtnArticle.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnArticle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnArticle.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnArticle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnArticle.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnArticle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnArticle.ForeColor = System.Drawing.Color.White;
+            this.BtnArticle.Image = global::prj_Presentacion.Properties.Resources.articles;
+            this.BtnArticle.Location = new System.Drawing.Point(527, 124);
+            this.BtnArticle.Name = "BtnArticle";
+            this.BtnArticle.Size = new System.Drawing.Size(277, 166);
+            this.BtnArticle.TabIndex = 28;
+            this.BtnArticle.Text = "Articulos";
+            this.BtnArticle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnArticle.UseVisualStyleBackColor = false;
+            this.BtnArticle.Click += new System.EventHandler(this.BtnArticle_Click);
+            // 
+            // BtnUsers
+            // 
+            this.BtnUsers.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnUsers.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnUsers.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnUsers.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnUsers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUsers.ForeColor = System.Drawing.Color.White;
+            this.BtnUsers.Image = global::prj_Presentacion.Properties.Resources.users;
+            this.BtnUsers.Location = new System.Drawing.Point(192, 124);
+            this.BtnUsers.Name = "BtnUsers";
+            this.BtnUsers.Size = new System.Drawing.Size(277, 166);
+            this.BtnUsers.TabIndex = 26;
+            this.BtnUsers.Text = "Usuarios";
+            this.BtnUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnUsers.UseVisualStyleBackColor = false;
+            this.BtnUsers.Click += new System.EventHandler(this.usersButton_Click);
             // 
             // backButton
             // 
@@ -158,8 +200,10 @@ namespace prj_Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(987, 576);
+            this.Controls.Add(this.BtnPerson);
+            this.Controls.Add(this.BtnArticle);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.usersButton);
+            this.Controls.Add(this.BtnUsers);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.label2);
@@ -167,6 +211,7 @@ namespace prj_Presentacion
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Settings";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -183,7 +228,9 @@ namespace prj_Presentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button backButton;
-        private System.Windows.Forms.Button usersButton;
+        private System.Windows.Forms.Button BtnUsers;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button BtnArticle;
+        private System.Windows.Forms.Button BtnPerson;
     }
 }

@@ -73,6 +73,24 @@
     <Compile Include="Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingsArticles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsArticles.Designer.cs">
+      <DependentUpon>SettingsArticles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsPersonas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsPersonas.Designer.cs">
+      <DependentUpon>SettingsPersonas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsUser.Designer.cs">
+      <DependentUpon>SettingsUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Shop.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,8 +113,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reports.resx">
+      <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsArticles.resx">
+      <DependentUpon>SettingsArticles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsPersonas.resx">
+      <DependentUpon>SettingsPersonas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsUser.resx">
+      <DependentUpon>SettingsUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shop.resx">
+      <DependentUpon>Shop.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -122,6 +155,23 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\mainMenu\save_48.png" />
+    <None Include="Resources\mainMenu\tipo_48.png" />
+    <None Include="Resources\mainMenu\edit_48.png" />
+    <None Include="Resources\mainMenu\add_48.png" />
+    <None Include="Resources\mainMenu\users.png" />
+    <None Include="Resources\mainMenu\articles.png" />
+    <None Include="Resources\mainMenu\clients.png" />
+    <None Include="Resources\mainMenu\editArticles_48.png" />
+    <None Include="Resources\mainMenu\articlesCategory_48.png" />
+    <None Include="Resources\mainMenu\articles_48.png" />
+    <None Include="Resources\mainMenu\roleUser_48.png" />
+    <None Include="Resources\mainMenu\editUser_64.png" />
+    <None Include="Resources\mainMenu\addUser_64.png" />
+    <None Include="Resources\mainMenu\brush_32.png" />
+    <None Include="Resources\mainMenu\search_32.png" />
+    <None Include="Resources\mainMenu\search_16.png" />
+    <None Include="Resources\mainMenu\user_64.png" />
     <None Include="Resources\mainMenu\backArrow_64.png" />
     <None Include="Resources\mainMenu\backArrow_32.png" />
     <None Include="Resources\mainMenu\settings_32.png" />
@@ -130,6 +180,9 @@
     <None Include="Resources\mainMenu\logout.png" />
     <None Include="Resources\mainMenu\settings.png" />
     <None Include="Resources\mainMenu\reports.png" />
+    <None Include="Resources\mainMenu\print_48.png" />
+    <None Include="Resources\mainMenu\plus_16.png" />
+    <None Include="Resources\mainMenu\plus_32.png" />
     <Content Include="Resources\mainMenu\sales.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

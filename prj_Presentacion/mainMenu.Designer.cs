@@ -178,6 +178,7 @@ namespace prj_Presentacion
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Name = "mainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "mainMenu";
             this.Load += new System.EventHandler(this.mainMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
