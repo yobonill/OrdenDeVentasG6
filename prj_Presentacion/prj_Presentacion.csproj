@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatUsuario.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatUsuario.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +63,12 @@
     </Compile>
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantUsuario.Designer.cs">
+      <DependentUpon>MantUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -103,6 +114,9 @@
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantUsuario.resx">
+      <DependentUpon>MantUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -131,6 +145,17 @@
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatUsuario.xsc">
+      <DependentUpon>DatUsuario.xsd</DependentUpon>
+    </None>
+    <None Include="DatUsuario.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatUsuario.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatUsuario.xss">
+      <DependentUpon>DatUsuario.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -155,6 +180,11 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Usuario\help_48px.png" />
+    <None Include="Resources\Usuario\delete_96px.png" />
+    <None Include="Resources\Usuario\print_52px.png" />
+    <None Include="Resources\Usuario\broom_80px.png" />
+    <None Include="Resources\Usuario\save_48px.png" />
     <None Include="Resources\mainMenu\save_48.png" />
     <None Include="Resources\mainMenu\tipo_48.png" />
     <None Include="Resources\mainMenu\edit_48.png" />

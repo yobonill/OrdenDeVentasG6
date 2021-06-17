@@ -123,6 +123,16 @@ namespace prj_Presentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap broom_80px {
+            get {
+                object obj = ResourceManager.GetObject("broom_80px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap brush_32 {
             get {
                 object obj = ResourceManager.GetObject("brush_32", resourceCulture);
@@ -136,6 +146,16 @@ namespace prj_Presentacion.Properties {
         internal static System.Drawing.Bitmap clients {
             get {
                 object obj = ResourceManager.GetObject("clients", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap delete_96px {
+            get {
+                object obj = ResourceManager.GetObject("delete_96px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -166,6 +186,16 @@ namespace prj_Presentacion.Properties {
         internal static System.Drawing.Bitmap editUser_64 {
             get {
                 object obj = ResourceManager.GetObject("editUser_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap help_48px {
+            get {
+                object obj = ResourceManager.GetObject("help_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -213,6 +243,16 @@ namespace prj_Presentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap print_52px {
+            get {
+                object obj = ResourceManager.GetObject("print_52px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap reports {
             get {
                 object obj = ResourceManager.GetObject("reports", resourceCulture);
@@ -246,6 +286,16 @@ namespace prj_Presentacion.Properties {
         internal static System.Drawing.Bitmap save_48 {
             get {
                 object obj = ResourceManager.GetObject("save_48", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap save_48px {
+            get {
+                object obj = ResourceManager.GetObject("save_48px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
