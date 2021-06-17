@@ -30,6 +30,7 @@ namespace prj_Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsUser));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,19 +49,21 @@ namespace prj_Presentacion
             this.logOutButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Cerrar = new System.Windows.Forms.Button();
-            this.LblTotal = new System.Windows.Forms.Label();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnRoles = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.LblUsuario = new System.Windows.Forms.Label();
             this.TmrHora = new System.Windows.Forms.Timer(this.components);
             this.LblFecha = new System.Windows.Forms.Label();
             this.LblHora = new System.Windows.Forms.Label();
             this.TmrMensaje = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.Lbltotal = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Tmr2click = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.datalistadousuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -71,7 +74,7 @@ namespace prj_Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(332, 64);
+            this.label1.Location = new System.Drawing.Point(332, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(646, 63);
@@ -122,6 +125,7 @@ namespace prj_Presentacion
             this.datalistadousuarios.RowTemplate.Height = 24;
             this.datalistadousuarios.Size = new System.Drawing.Size(1140, 375);
             this.datalistadousuarios.TabIndex = 35;
+            this.toolTip1.SetToolTip(this.datalistadousuarios, "Tabla de usuarios");
             this.datalistadousuarios.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadousuarios_CellDoubleClick);
             // 
             // groupBox1
@@ -166,6 +170,7 @@ namespace prj_Presentacion
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(49, 33);
             this.BtnLimpiar.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.BtnLimpiar, "Limpiar campos");
             this.BtnLimpiar.UseVisualStyleBackColor = false;
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
             // 
@@ -182,6 +187,7 @@ namespace prj_Presentacion
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(49, 33);
             this.BtnBuscar.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.BtnBuscar, "Buscar filtro");
             this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
@@ -192,6 +198,7 @@ namespace prj_Presentacion
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(101, 22);
             this.TxtTelefono.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.TxtTelefono, "Ingrese registro a filtrar");
             this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
             // 
             // label5
@@ -212,6 +219,7 @@ namespace prj_Presentacion
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(263, 22);
             this.TxtCorreo.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.TxtCorreo, "Ingrese registro a filtrar");
             this.TxtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCorreo_KeyPress);
             // 
             // label7
@@ -231,6 +239,7 @@ namespace prj_Presentacion
             this.TxtCedula.Name = "TxtCedula";
             this.TxtCedula.Size = new System.Drawing.Size(101, 22);
             this.TxtCedula.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.TxtCedula, "Ingrese registro a filtrar");
             this.TxtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCedula_KeyPress);
             // 
             // label8
@@ -299,17 +308,6 @@ namespace prj_Presentacion
             this.Cerrar.UseVisualStyleBackColor = false;
             this.Cerrar.Click += new System.EventHandler(this.Cerrar_Click);
             // 
-            // LblTotal
-            // 
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.LblTotal.ForeColor = System.Drawing.Color.Red;
-            this.LblTotal.Location = new System.Drawing.Point(1065, 622);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(49, 20);
-            this.LblTotal.TabIndex = 59;
-            this.LblTotal.Text = "00.00";
-            // 
             // BtnNuevo
             // 
             this.BtnNuevo.BackColor = System.Drawing.Color.MidnightBlue;
@@ -320,13 +318,13 @@ namespace prj_Presentacion
             this.BtnNuevo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNuevo.ForeColor = System.Drawing.Color.White;
             this.BtnNuevo.Image = global::prj_Presentacion.Properties.Resources.addUser_64;
-            this.BtnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnNuevo.Location = new System.Drawing.Point(1195, 270);
             this.BtnNuevo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnNuevo.Name = "BtnNuevo";
             this.BtnNuevo.Size = new System.Drawing.Size(91, 78);
             this.BtnNuevo.TabIndex = 55;
             this.BtnNuevo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.BtnNuevo, "Ingresar nuevo registro");
             this.BtnNuevo.UseVisualStyleBackColor = false;
             this.BtnNuevo.Click += new System.EventHandler(this.BtnNuevo_Click);
             // 
@@ -340,13 +338,13 @@ namespace prj_Presentacion
             this.BtnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.ForeColor = System.Drawing.Color.White;
             this.BtnEditar.Image = global::prj_Presentacion.Properties.Resources.editUser_64;
-            this.BtnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BtnEditar.Location = new System.Drawing.Point(1195, 400);
             this.BtnEditar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(91, 78);
             this.BtnEditar.TabIndex = 56;
             this.BtnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.BtnEditar, " Editar registro");
             this.BtnEditar.UseVisualStyleBackColor = false;
             this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
             // 
@@ -367,6 +365,7 @@ namespace prj_Presentacion
             this.BtnRoles.TabIndex = 57;
             this.BtnRoles.Text = "Roles";
             this.BtnRoles.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.toolTip1.SetToolTip(this.BtnRoles, "Configuracion de roles");
             this.BtnRoles.UseVisualStyleBackColor = false;
             this.BtnRoles.Click += new System.EventHandler(this.BtnRoles_Click);
             // 
@@ -381,35 +380,14 @@ namespace prj_Presentacion
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Image = global::prj_Presentacion.Properties.Resources.backArrow_64;
-            this.button1.Location = new System.Drawing.Point(73, 64);
+            this.button1.Location = new System.Drawing.Point(73, 75);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(83, 64);
             this.button1.TabIndex = 49;
+            this.toolTip1.SetToolTip(this.button1, "Volver atras");
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 663);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1316, 46);
-            this.pictureBox3.TabIndex = 30;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1316, 57);
-            this.pictureBox2.TabIndex = 28;
-            this.pictureBox2.TabStop = false;
             // 
             // label6
             // 
@@ -454,11 +432,66 @@ namespace prj_Presentacion
             this.LblHora.BackColor = System.Drawing.Color.Black;
             this.LblHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblHora.Location = new System.Drawing.Point(868, 19);
+            this.LblHora.Location = new System.Drawing.Point(895, 19);
             this.LblHora.Name = "LblHora";
             this.LblHora.Size = new System.Drawing.Size(50, 20);
             this.LblHora.TabIndex = 63;
             this.LblHora.Text = "Hora";
+            // 
+            // TmrMensaje
+            // 
+            this.TmrMensaje.Enabled = true;
+            this.TmrMensaje.Tick += new System.EventHandler(this.TmrMensaje_Tick_1);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Black;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 663);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1316, 46);
+            this.pictureBox3.TabIndex = 30;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1316, 57);
+            this.pictureBox2.TabIndex = 28;
+            this.pictureBox2.TabStop = false;
+            // 
+            // Lbltotal
+            // 
+            this.Lbltotal.AutoSize = true;
+            this.Lbltotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbltotal.ForeColor = System.Drawing.Color.OrangeRed;
+            this.Lbltotal.Location = new System.Drawing.Point(1082, 621);
+            this.Lbltotal.Name = "Lbltotal";
+            this.Lbltotal.Size = new System.Drawing.Size(49, 20);
+            this.Lbltotal.TabIndex = 64;
+            this.Lbltotal.Text = "0000";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(57, 586);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(285, 18);
+            this.label9.TabIndex = 65;
+            this.label9.Text = "Doble click para seleccionar registro";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
+            // 
+            // Tmr2click
+            // 
+            this.Tmr2click.Enabled = true;
+            this.Tmr2click.Interval = 250;
+            this.Tmr2click.Tick += new System.EventHandler(this.Tmr2click_Tick);
             // 
             // SettingsUser
             // 
@@ -466,11 +499,12 @@ namespace prj_Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1316, 709);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Lbltotal);
             this.Controls.Add(this.LblHora);
             this.Controls.Add(this.LblFecha);
             this.Controls.Add(this.LblUsuario);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.Cerrar);
             this.Controls.Add(this.BtnNuevo);
             this.Controls.Add(this.BtnEditar);
@@ -485,6 +519,7 @@ namespace prj_Presentacion
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SettingsUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -525,12 +560,14 @@ namespace prj_Presentacion
         private System.Windows.Forms.Button BtnRoles;
         private System.Windows.Forms.Button Cerrar;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label LblTotal;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Timer TmrHora;
         private System.Windows.Forms.Label LblFecha;
         private System.Windows.Forms.Label LblHora;
         private System.Windows.Forms.Timer TmrMensaje;
+        private System.Windows.Forms.Label Lbltotal;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Timer Tmr2click;
     }
 }

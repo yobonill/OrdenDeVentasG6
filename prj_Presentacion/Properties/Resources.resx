@@ -136,14 +136,17 @@
   <data name="search_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\search_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="editArticles_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainMenu\editArticles_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="articles" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainMenu\articles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sales" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\sales.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logout_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\logout_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="clients" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainMenu\clients.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plus_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\plus_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,8 +160,11 @@
   <data name="print_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\print_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plus_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainMenu\plus_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainMenu\reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="help_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Usuario\help_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="users" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\users.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,8 +178,8 @@
   <data name="add_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\add_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="reports" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainMenu\reports.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editArticles_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainMenu\editArticles_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="brush_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\brush_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,22 +190,19 @@
   <data name="editUser_64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\editUser_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="articles" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainMenu\articles.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="broom_80px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usuario\broom_80px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="print_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Usuario\print_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="clients" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\mainMenu\clients.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="plus_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainMenu\plus_16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="tipo_48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\mainMenu\tipo_48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="help_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Usuario\help_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="editUser_641" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\mainMenu\editUser_64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

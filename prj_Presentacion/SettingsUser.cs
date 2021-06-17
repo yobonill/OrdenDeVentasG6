@@ -111,18 +111,6 @@ namespace prj_Presentacion
                     VARIABLE = 1;
                 }
 
-                //if (TxtPrecio.Text != "")
-                //{
-                //    if (VARIABLE != 1)
-                //    {
-                //        parametro = " Precio LIKE '%" + TxtPrecio.Text + "%'";
-                //    }
-                //    else
-                //    {
-                //        parametro = parametro + " AND Precio LIKE '%" + TxtPrecio.Text + "%'";
-                //    }
-                //    VARIABLE = 1;
-                //}
 
                 string SQL = "SELECT idusuario,idrol,usuario,password,num_documento,direccion,telefono,email,estado FROM dbo.usuario";
 
@@ -141,8 +129,8 @@ namespace prj_Presentacion
                 datalistadousuarios.DataSource = DSQL;
 
                 datalistadousuarios.DataMember = "VerRecord";
-                LblTotal.Visible = true;
-                LblTotal.Text = DSQL.Tables["VerRecord"].Rows.Count.ToString();
+                Lbltotal.Visible = true;
+                Lbltotal.Text = DSQL.Tables["VerRecord"].Rows.Count.ToString();
             }
 
             catch (Exception ex)
@@ -272,6 +260,8 @@ namespace prj_Presentacion
                 MessageBox.Show(ex.Message);
             }
         }
+
+
         private void TmrHora_Tick_1(object sender, EventArgs e)
         {
             LblHora.Text = DateTime.Now.ToString("hh:mm");
@@ -296,8 +286,8 @@ namespace prj_Presentacion
                 datalistadousuarios.DataSource = DSQL;
                 
                 datalistadousuarios.DataMember = "VerRecord";
-                LblTotal.Visible = true;
-                LblTotal.Text = DSQL.Tables["VerRecord"].Rows.Count.ToString();
+                Lbltotal.Visible = true;
+                Lbltotal.Text = DSQL.Tables["VerRecord"].Rows.Count.ToString();
             }
             catch (Exception ex)
             {
@@ -351,12 +341,12 @@ namespace prj_Presentacion
             passwordColumn.HeaderText = "Contraseña";
             passwordColumn.Frozen = true;
             passwordColumn.ValueType = typeof(string);
-            //passwordColumn.
+            passwordColumn.Visible = false;
             datalistadousuarios.Columns.Add(passwordColumn);
             
             DataGridViewTextBoxColumn num_documentoColumn = new DataGridViewTextBoxColumn();
             num_documentoColumn.DataPropertyName = "num_documento";
-            num_documentoColumn.Width = 100;
+            num_documentoColumn.Width = 120;
             num_documentoColumn.HeaderText = "No. de documento";
             num_documentoColumn.Frozen = true;
             num_documentoColumn.ValueType = typeof(string);
@@ -364,7 +354,7 @@ namespace prj_Presentacion
             
             DataGridViewTextBoxColumn direccionColumn = new DataGridViewTextBoxColumn();
             direccionColumn.DataPropertyName = "direccion";
-            direccionColumn.Width = 120;
+            direccionColumn.Width = 200;
             direccionColumn.HeaderText = "Dirección";
             direccionColumn.Frozen = true;
             direccionColumn.ValueType = typeof(string);
@@ -461,7 +451,28 @@ namespace prj_Presentacion
             }
         }
 
-        
+        private void label9_Click(object sender, EventArgs e)
+        {
+            Tmr2click.Stop();
+            label9.Visible = false;
+        }
+
+        private void Tmr2click_Tick(object sender, EventArgs e)
+        {
+            if (label9.Visible == true)
+            {
+                label9.Visible = false;
+            }
+            else
+            {
+                label9.Visible = true;
+            }
+        }
+
+        private void TmrMensaje_Tick_1(object sender, EventArgs e)
+        {
+            this.Text = this.Text.Substring(1) + this.Text.Substring(0, 1);
+        }
     }
 }
 

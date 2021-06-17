@@ -306,6 +306,16 @@ namespace prj_Presentacion
 
         private void idusuarioTextBox_KeyPress_1(object sender, KeyPressEventArgs e)
         {
+          
+        }
+
+        private void BtnAyuda_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(@"c:\Ayuda\matenimiento a usuarios.Pdf");
+        }
+
+        private void BtnImprimir_Click(object sender, EventArgs e)
+        {
 
         }
 

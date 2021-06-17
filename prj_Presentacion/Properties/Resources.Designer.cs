@@ -193,6 +193,16 @@ namespace prj_Presentacion.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap editUser_641 {
+            get {
+                object obj = ResourceManager.GetObject("editUser_641", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap help_48px {
             get {
                 object obj = ResourceManager.GetObject("help_48px", resourceCulture);

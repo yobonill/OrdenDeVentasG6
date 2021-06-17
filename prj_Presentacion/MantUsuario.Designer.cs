@@ -177,7 +177,7 @@ namespace prj_Presentacion
             this.toolStripButton6});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(531, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(531, 31);
             this.toolStrip1.TabIndex = 19;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -187,7 +187,7 @@ namespace prj_Presentacion
             this.BtnGuardar.Image = global::prj_Presentacion.Properties.Resources.save_48px;
             this.BtnGuardar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnGuardar.Name = "BtnGuardar";
-            this.BtnGuardar.Size = new System.Drawing.Size(29, 24);
+            this.BtnGuardar.Size = new System.Drawing.Size(29, 28);
             this.BtnGuardar.Text = "toolStripButton1";
             this.BtnGuardar.ToolTipText = "Guardar registro";
             this.BtnGuardar.Click += new System.EventHandler(this.BtnGuardar_Click);
@@ -204,7 +204,7 @@ namespace prj_Presentacion
             this.BtnLimpiar.Image = global::prj_Presentacion.Properties.Resources.broom_80px;
             this.BtnLimpiar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(29, 24);
+            this.BtnLimpiar.Size = new System.Drawing.Size(29, 28);
             this.BtnLimpiar.Text = "toolStripButton2";
             this.BtnLimpiar.ToolTipText = "Limpiar registro";
             this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
@@ -221,7 +221,7 @@ namespace prj_Presentacion
             this.BtnEliminar.Image = global::prj_Presentacion.Properties.Resources.delete_96px;
             this.BtnEliminar.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(29, 24);
+            this.BtnEliminar.Size = new System.Drawing.Size(29, 28);
             this.BtnEliminar.Text = "toolStripButton4";
             this.BtnEliminar.ToolTipText = "Eliminar registro";
             this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
@@ -238,14 +238,15 @@ namespace prj_Presentacion
             this.BtnImprimir.Image = global::prj_Presentacion.Properties.Resources.print_52px;
             this.BtnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnImprimir.Name = "BtnImprimir";
-            this.BtnImprimir.Size = new System.Drawing.Size(29, 24);
+            this.BtnImprimir.Size = new System.Drawing.Size(29, 28);
             this.BtnImprimir.Text = "toolStripButton3";
             this.BtnImprimir.ToolTipText = "Imprimir regitro";
+            this.BtnImprimir.Click += new System.EventHandler(this.BtnImprimir_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(245, 24);
+            this.toolStripLabel1.Size = new System.Drawing.Size(245, 28);
             this.toolStripLabel1.Text = "                                                           ";
             // 
             // BtnAyuda
@@ -254,9 +255,10 @@ namespace prj_Presentacion
             this.BtnAyuda.Image = global::prj_Presentacion.Properties.Resources.help_48px;
             this.BtnAyuda.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.BtnAyuda.Name = "BtnAyuda";
-            this.BtnAyuda.Size = new System.Drawing.Size(29, 24);
+            this.BtnAyuda.Size = new System.Drawing.Size(29, 28);
             this.BtnAyuda.Text = "toolStripButton5";
             this.BtnAyuda.ToolTipText = "Ayuda";
+            this.BtnAyuda.Click += new System.EventHandler(this.BtnAyuda_Click);
             // 
             // toolStripSeparator3
             // 
@@ -271,7 +273,7 @@ namespace prj_Presentacion
             this.toolStripButton6.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton6.Image")));
             this.toolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton6.Name = "toolStripButton6";
-            this.toolStripButton6.Size = new System.Drawing.Size(29, 24);
+            this.toolStripButton6.Size = new System.Drawing.Size(29, 28);
             this.toolStripButton6.Text = "toolStripButton6";
             this.toolStripButton6.ToolTipText = "Terminar Mantenimiento";
             this.toolStripButton6.Click += new System.EventHandler(this.toolStripButton6_Click);
@@ -343,6 +345,7 @@ namespace prj_Presentacion
             // 
             this.passwordTextBox.Location = new System.Drawing.Point(176, 143);
             this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = '•';
             this.passwordTextBox.Size = new System.Drawing.Size(200, 22);
             this.passwordTextBox.TabIndex = 26;
             // 
@@ -393,6 +396,7 @@ namespace prj_Presentacion
             this.Controls.Add(this.LblMensaje);
             this.Controls.Add(this.toolStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MantUsuario";
