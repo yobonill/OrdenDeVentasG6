@@ -12,15 +12,17 @@ namespace prj_Presentacion
 {
     public partial class SettingsArticles : Form
     {
-        public SettingsArticles()
+        public string _Usuario;
+        public SettingsArticles(string loggedUser)
         {
             InitializeComponent();
+            _Usuario = loggedUser;
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Settings cargar = new Settings();
+            Settings cargar = new Settings(_Usuario);
             cargar.ShowDialog();
         }
 
@@ -120,6 +122,11 @@ namespace prj_Presentacion
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SettingsArticles_Load(object sender, EventArgs e)
         {
 
         }

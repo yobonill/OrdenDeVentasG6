@@ -32,21 +32,21 @@ namespace prj_Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.datalistadoarticulos = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.backButton = new System.Windows.Forms.Button();
-            this.logOutButton = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.datalistadoarticulos = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.backButton = new System.Windows.Forms.Button();
+            this.logOutButton = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -86,19 +86,6 @@ namespace prj_Presentacion
             this.label8.TabIndex = 0;
             this.label8.Text = "FECHA DESDE";
             // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(763, 546);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 25);
-            this.label2.TabIndex = 70;
-            this.label2.Text = "Creado por el grupo 6";
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dateTimePicker2);
@@ -117,99 +104,22 @@ namespace prj_Presentacion
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
             // 
-            // datalistadoarticulos
+            // dateTimePicker2
             // 
-            this.datalistadoarticulos.AllowUserToAddRows = false;
-            this.datalistadoarticulos.AllowUserToDeleteRows = false;
-            this.datalistadoarticulos.AllowUserToOrderColumns = true;
-            this.datalistadoarticulos.AllowUserToResizeColumns = false;
-            this.datalistadoarticulos.AllowUserToResizeRows = false;
-            this.datalistadoarticulos.BackgroundColor = System.Drawing.Color.White;
-            this.datalistadoarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadoarticulos.Location = new System.Drawing.Point(17, 187);
-            this.datalistadoarticulos.Margin = new System.Windows.Forms.Padding(2);
-            this.datalistadoarticulos.Name = "datalistadoarticulos";
-            this.datalistadoarticulos.RowHeadersVisible = false;
-            this.datalistadoarticulos.RowHeadersWidth = 51;
-            this.datalistadoarticulos.RowTemplate.Height = 24;
-            this.datalistadoarticulos.Size = new System.Drawing.Size(947, 347);
-            this.datalistadoarticulos.TabIndex = 74;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(317, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(378, 52);
-            this.label1.TabIndex = 73;
-            this.label1.Text = "Reporte de ventas";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Black;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(12, 11);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 25);
-            this.label3.TabIndex = 68;
-            this.label3.Text = "Sistema de Orden de Ventas";
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker2.Location = new System.Drawing.Point(595, 26);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 22);
+            this.dateTimePicker2.TabIndex = 12;
+            this.dateTimePicker2.Value = new System.DateTime(2021, 6, 11, 13, 49, 55, 0);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePicker1.Location = new System.Drawing.Point(326, 26);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(110, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(110, 22);
             this.dateTimePicker1.TabIndex = 11;
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(595, 26);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(110, 20);
-            this.dateTimePicker2.TabIndex = 12;
-            this.dateTimePicker2.Value = new System.DateTime(2021, 6, 11, 13, 49, 55, 0);
-            // 
-            // backButton
-            // 
-            this.backButton.BackColor = System.Drawing.Color.Transparent;
-            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.backButton.FlatAppearance.BorderSize = 0;
-            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.backButton.ForeColor = System.Drawing.Color.Black;
-            this.backButton.Image = global::prj_Presentacion.Properties.Resources.backArrow_64;
-            this.backButton.Location = new System.Drawing.Point(55, 52);
-            this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(62, 52);
-            this.backButton.TabIndex = 72;
-            this.backButton.UseVisualStyleBackColor = false;
-            this.backButton.Click += new System.EventHandler(this.backButton_Click);
-            // 
-            // logOutButton
-            // 
-            this.logOutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.logOutButton.BackColor = System.Drawing.Color.Black;
-            this.logOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.logOutButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.logOutButton.FlatAppearance.BorderSize = 0;
-            this.logOutButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
-            this.logOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.logOutButton.ForeColor = System.Drawing.Color.Black;
-            this.logOutButton.Image = global::prj_Presentacion.Properties.Resources.logout_32;
-            this.logOutButton.Location = new System.Drawing.Point(926, 3);
-            this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(49, 37);
-            this.logOutButton.TabIndex = 71;
-            this.logOutButton.UseVisualStyleBackColor = false;
-            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
             // button1
             // 
@@ -258,25 +168,70 @@ namespace prj_Presentacion
             this.BtnBuscar.UseVisualStyleBackColor = false;
             this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
-            // pictureBox3
+            // datalistadoarticulos
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Black;
-            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 539);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(987, 37);
-            this.pictureBox3.TabIndex = 69;
-            this.pictureBox3.TabStop = false;
+            this.datalistadoarticulos.AllowUserToAddRows = false;
+            this.datalistadoarticulos.AllowUserToDeleteRows = false;
+            this.datalistadoarticulos.AllowUserToOrderColumns = true;
+            this.datalistadoarticulos.AllowUserToResizeColumns = false;
+            this.datalistadoarticulos.AllowUserToResizeRows = false;
+            this.datalistadoarticulos.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.datalistadoarticulos.Location = new System.Drawing.Point(17, 187);
+            this.datalistadoarticulos.Margin = new System.Windows.Forms.Padding(2);
+            this.datalistadoarticulos.Name = "datalistadoarticulos";
+            this.datalistadoarticulos.RowHeadersVisible = false;
+            this.datalistadoarticulos.RowHeadersWidth = 51;
+            this.datalistadoarticulos.RowTemplate.Height = 24;
+            this.datalistadoarticulos.Size = new System.Drawing.Size(947, 347);
+            this.datalistadoarticulos.TabIndex = 74;
             // 
-            // pictureBox2
+            // label1
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Black;
-            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(987, 46);
-            this.pictureBox2.TabIndex = 67;
-            this.pictureBox2.TabStop = false;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(317, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(378, 52);
+            this.label1.TabIndex = 73;
+            this.label1.Text = "Reporte de ventas";
+            // 
+            // backButton
+            // 
+            this.backButton.BackColor = System.Drawing.Color.Transparent;
+            this.backButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.backButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.backButton.FlatAppearance.BorderSize = 0;
+            this.backButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.backButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.backButton.ForeColor = System.Drawing.Color.Black;
+            this.backButton.Image = global::prj_Presentacion.Properties.Resources.backArrow_64;
+            this.backButton.Location = new System.Drawing.Point(55, 52);
+            this.backButton.Name = "backButton";
+            this.backButton.Size = new System.Drawing.Size(62, 52);
+            this.backButton.TabIndex = 72;
+            this.backButton.UseVisualStyleBackColor = false;
+            this.backButton.Click += new System.EventHandler(this.backButton_Click);
+            // 
+            // logOutButton
+            // 
+            this.logOutButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.logOutButton.BackColor = System.Drawing.Color.Black;
+            this.logOutButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.logOutButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.logOutButton.FlatAppearance.BorderSize = 0;
+            this.logOutButton.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.logOutButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.logOutButton.ForeColor = System.Drawing.Color.Black;
+            this.logOutButton.Image = global::prj_Presentacion.Properties.Resources.logout_32;
+            this.logOutButton.Location = new System.Drawing.Point(926, 4);
+            this.logOutButton.Name = "logOutButton";
+            this.logOutButton.Size = new System.Drawing.Size(49, 37);
+            this.logOutButton.TabIndex = 71;
+            this.logOutButton.UseVisualStyleBackColor = false;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
             // settingsButton
             // 
@@ -290,12 +245,57 @@ namespace prj_Presentacion
             this.settingsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.settingsButton.ForeColor = System.Drawing.Color.Black;
             this.settingsButton.Image = global::prj_Presentacion.Properties.Resources.settings_32;
-            this.settingsButton.Location = new System.Drawing.Point(863, 3);
+            this.settingsButton.Location = new System.Drawing.Point(864, 4);
             this.settingsButton.Name = "settingsButton";
             this.settingsButton.Size = new System.Drawing.Size(46, 37);
             this.settingsButton.TabIndex = 76;
             this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Black;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(763, 546);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(201, 25);
+            this.label2.TabIndex = 80;
+            this.label2.Text = "Creado por el grupo 6";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Black;
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pictureBox3.Location = new System.Drawing.Point(0, 539);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(987, 37);
+            this.pictureBox3.TabIndex = 79;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Black;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label3.Location = new System.Drawing.Point(12, 11);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(264, 25);
+            this.label3.TabIndex = 78;
+            this.label3.Text = "Sistema de Orden de Ventas";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Black;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(987, 46);
+            this.pictureBox2.TabIndex = 77;
+            this.pictureBox2.TabStop = false;
             // 
             // Reports
             // 
@@ -306,16 +306,17 @@ namespace prj_Presentacion
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.logOutButton);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.datalistadoarticulos);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Name = "Reports";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reports";
+            this.Load += new System.EventHandler(this.Reports_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).EndInit();
@@ -327,8 +328,6 @@ namespace prj_Presentacion
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button BtnLimpiar;
         private System.Windows.Forms.Button BtnBuscar;
@@ -336,15 +335,16 @@ namespace prj_Presentacion
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button logOutButton;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView datalistadoarticulos;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button settingsButton;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

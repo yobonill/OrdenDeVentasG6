@@ -12,9 +12,11 @@ namespace prj_Presentacion
 {
     public partial class mainMenu : Form
     {
-        public mainMenu()
+        public string _Usuario;
+        public mainMenu(string loggedUser)
         {
             InitializeComponent();
+            _Usuario = loggedUser;
         }
         private void mainMenu_Load(object sender, EventArgs e)
         {
@@ -24,21 +26,21 @@ namespace prj_Presentacion
         private void sellButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Shop cargar = new Shop();
+            Shop cargar = new Shop(_Usuario);
             cargar.ShowDialog();
         }
 
         private void reportsButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Reports cargar = new Reports();
+            Reports cargar = new Reports(_Usuario);
             cargar.ShowDialog();
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Settings cargar = new Settings();
+            Settings cargar = new Settings(_Usuario);
             cargar.ShowDialog();
         }
 

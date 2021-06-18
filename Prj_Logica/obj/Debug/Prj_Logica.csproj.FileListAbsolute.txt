@@ -11,3 +11,16 @@ C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\Practi
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Datos.pdb
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Entidades.pdb
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.csproj.CopyComplete
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Logica.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Logica.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Datos.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Entidades.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Datos.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\bin\Debug\Prj_Entidades.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.csproj.AssemblyReference.cache
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.Properties.Resources.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.csproj.GenerateResource.cache
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.csproj.CoreCompileInputs.cache
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.csproj.CopyComplete
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Logica\obj\Debug\Prj_Logica.pdb

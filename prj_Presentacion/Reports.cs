@@ -12,9 +12,11 @@ namespace prj_Presentacion
 {
     public partial class Reports : Form
     {
-        public Reports()
+        public string _Usuario;
+        public Reports(string loggedUser)
         {
             InitializeComponent();
+            _Usuario = loggedUser;
         }
 
         private void TxtNombre_TextChanged(object sender, EventArgs e)
@@ -42,15 +44,20 @@ namespace prj_Presentacion
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainMenu cargar = new mainMenu();
+            mainMenu cargar = new mainMenu(_Usuario);
             cargar.ShowDialog();
         }
 
         private void settingsButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Settings cargar = new Settings();
+            Settings cargar = new Settings(_Usuario);
             cargar.ShowDialog();
+        }
+
+        private void Reports_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

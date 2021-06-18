@@ -22,3 +22,27 @@ C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\Practi
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsPersonas.resources
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsUser.resources
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Shop.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\Prj_Presentacion.csproj.AssemblyReference.cache
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.LogIn.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.mainMenu.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Properties.Resources.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Reports.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Settings.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsArticles.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsPersonas.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.SettingsUser.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.Shop.resources
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\Prj_Presentacion.csproj.GenerateResource.cache
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\Prj_Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\prj_Presentacion.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\prj_Presentacion.exe.config
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\prj_Presentacion.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\prj_Presentacion.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Entidades.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Logica.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Datos.exe
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Entidades.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Logica.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Datos.pdb
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\Prj_Presentacion.csproj.CopyComplete

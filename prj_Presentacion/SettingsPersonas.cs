@@ -12,16 +12,23 @@ namespace prj_Presentacion
 {
     public partial class SettingsPersonas : Form
     {
-        public SettingsPersonas()
+        public string _Usuario;
+        public SettingsPersonas(string loggedUser)
         {
             InitializeComponent();
+            _Usuario = loggedUser;
         }
 
         private void backButton_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Settings cargar = new Settings();
+            Settings cargar = new Settings(_Usuario);
             cargar.ShowDialog();
+        }
+
+        private void SettingsPersonas_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

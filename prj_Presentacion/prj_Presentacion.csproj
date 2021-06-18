@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatSistema.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DatSistema.xsd</DependentUpon>
+    </Compile>
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +136,17 @@
     <EmbeddedResource Include="Shop.resx">
       <DependentUpon>Shop.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DatSistema.xsc">
+      <DependentUpon>DatSistema.xsd</DependentUpon>
+    </None>
+    <None Include="DatSistema.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DatSistema.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DatSistema.xss">
+      <DependentUpon>DatSistema.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -145,6 +161,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Prj_Datos\Prj_Datos.csproj">
+      <Project>{2306d7fc-4929-4b91-a067-8544e15c767f}</Project>
+      <Name>Prj_Datos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Prj_Entidades\Prj_Entidades.csproj">
       <Project>{4247f5bf-f274-455d-be70-7a71528f1ed4}</Project>
       <Name>Prj_Entidades</Name>
@@ -184,6 +204,9 @@
     <None Include="Resources\mainMenu\plus_16.png" />
     <None Include="Resources\mainMenu\plus_32.png" />
     <Content Include="Resources\mainMenu\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Acceso\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
