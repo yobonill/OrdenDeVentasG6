@@ -29,26 +29,38 @@ namespace prj_Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_cantidad = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.CbArticulos = new System.Windows.Forms.ComboBox();
-            this.cantidad = new System.Windows.Forms.NumericUpDown();
-            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.upDownCantidad = new System.Windows.Forms.NumericUpDown();
+            this.BtnAgregar = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.datalistadoarticulos = new System.Windows.Forms.DataGridView();
+            this.Dg_Detalles = new System.Windows.Forms.DataGridView();
+            this.ID_ARTICULO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DESC_PRODUCTO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CANTIDAD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTALS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
             this.BtnTipo = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txt_cantidad = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.txt_descuento = new System.Windows.Forms.Label();
+            this.txb_descuento = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtTotalGeneral = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownCantidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_Detalles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -71,8 +83,8 @@ namespace prj_Presentacion
             this.groupBox1.Controls.Add(this.txt_cantidad);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.CbArticulos);
-            this.groupBox1.Controls.Add(this.cantidad);
-            this.groupBox1.Controls.Add(this.BtnBuscar);
+            this.groupBox1.Controls.Add(this.upDownCantidad);
+            this.groupBox1.Controls.Add(this.BtnAgregar);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Location = new System.Drawing.Point(17, 125);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -81,6 +93,30 @@ namespace prj_Presentacion
             this.groupBox1.Size = new System.Drawing.Size(947, 58);
             this.groupBox1.TabIndex = 75;
             this.groupBox1.TabStop = false;
+            // 
+            // txt_cantidad
+            // 
+            this.txt_cantidad.AutoSize = true;
+            this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_cantidad.Location = new System.Drawing.Point(577, 17);
+            this.txt_cantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_cantidad.Name = "txt_cantidad";
+            this.txt_cantidad.Size = new System.Drawing.Size(68, 31);
+            this.txt_cantidad.TabIndex = 12;
+            this.txt_cantidad.Text = "XXX";
+            this.txt_cantidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(464, 25);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(110, 17);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "EN EXISTENCIA";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CbArticulos
             // 
@@ -91,37 +127,37 @@ namespace prj_Presentacion
             this.CbArticulos.Size = new System.Drawing.Size(201, 24);
             this.CbArticulos.TabIndex = 10;
             // 
-            // cantidad
+            // upDownCantidad
             // 
-            this.cantidad.Location = new System.Drawing.Point(412, 24);
-            this.cantidad.Name = "cantidad";
-            this.cantidad.Size = new System.Drawing.Size(32, 20);
-            this.cantidad.TabIndex = 9;
-            this.cantidad.Value = new decimal(new int[] {
+            this.upDownCantidad.Location = new System.Drawing.Point(412, 24);
+            this.upDownCantidad.Name = "upDownCantidad";
+            this.upDownCantidad.Size = new System.Drawing.Size(32, 22);
+            this.upDownCantidad.TabIndex = 9;
+            this.upDownCantidad.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
             // 
-            // BtnBuscar
+            // BtnAgregar
             // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
-            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscar.ForeColor = System.Drawing.Color.White;
-            this.BtnBuscar.Image = global::prj_Presentacion.Properties.Resources.add_48;
-            this.BtnBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnBuscar.Location = new System.Drawing.Point(731, 19);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(124, 27);
-            this.BtnBuscar.TabIndex = 8;
-            this.BtnBuscar.Text = "AÑADIR";
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            this.BtnAgregar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.White;
+            this.BtnAgregar.Image = global::prj_Presentacion.Properties.Resources.add_48;
+            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnAgregar.Location = new System.Drawing.Point(731, 19);
+            this.BtnAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(124, 27);
+            this.BtnAgregar.TabIndex = 8;
+            this.BtnAgregar.Text = "AÑADIR";
+            this.BtnAgregar.UseVisualStyleBackColor = false;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnBuscar_Click);
             // 
             // label8
             // 
@@ -135,23 +171,86 @@ namespace prj_Presentacion
             this.label8.Text = "SELECCIONAR ARTICULOS";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // datalistadoarticulos
+            // Dg_Detalles
             // 
-            this.datalistadoarticulos.AllowUserToAddRows = false;
-            this.datalistadoarticulos.AllowUserToDeleteRows = false;
-            this.datalistadoarticulos.AllowUserToOrderColumns = true;
-            this.datalistadoarticulos.AllowUserToResizeColumns = false;
-            this.datalistadoarticulos.AllowUserToResizeRows = false;
-            this.datalistadoarticulos.BackgroundColor = System.Drawing.Color.White;
-            this.datalistadoarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.datalistadoarticulos.Location = new System.Drawing.Point(17, 187);
-            this.datalistadoarticulos.Margin = new System.Windows.Forms.Padding(2);
-            this.datalistadoarticulos.Name = "datalistadoarticulos";
-            this.datalistadoarticulos.RowHeadersVisible = false;
-            this.datalistadoarticulos.RowHeadersWidth = 51;
-            this.datalistadoarticulos.RowTemplate.Height = 24;
-            this.datalistadoarticulos.Size = new System.Drawing.Size(947, 264);
-            this.datalistadoarticulos.TabIndex = 74;
+            this.Dg_Detalles.AllowUserToAddRows = false;
+            this.Dg_Detalles.AllowUserToDeleteRows = false;
+            this.Dg_Detalles.AllowUserToOrderColumns = true;
+            this.Dg_Detalles.AllowUserToResizeColumns = false;
+            this.Dg_Detalles.AllowUserToResizeRows = false;
+            this.Dg_Detalles.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dg_Detalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dg_Detalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dg_Detalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.ID_ARTICULO,
+            this.DESC_PRODUCTO,
+            this.CANTIDAD,
+            this.PRECIO,
+            this.TOTALS});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dg_Detalles.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Dg_Detalles.Location = new System.Drawing.Point(17, 187);
+            this.Dg_Detalles.Margin = new System.Windows.Forms.Padding(2);
+            this.Dg_Detalles.Name = "Dg_Detalles";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dg_Detalles.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Dg_Detalles.RowHeadersVisible = false;
+            this.Dg_Detalles.RowHeadersWidth = 51;
+            this.Dg_Detalles.RowTemplate.Height = 24;
+            this.Dg_Detalles.Size = new System.Drawing.Size(947, 264);
+            this.Dg_Detalles.TabIndex = 74;
+            // 
+            // ID_ARTICULO
+            // 
+            this.ID_ARTICULO.Frozen = true;
+            this.ID_ARTICULO.HeaderText = "#REFERENCIA";
+            this.ID_ARTICULO.Name = "ID_ARTICULO";
+            // 
+            // DESC_PRODUCTO
+            // 
+            this.DESC_PRODUCTO.Frozen = true;
+            this.DESC_PRODUCTO.HeaderText = "PRODUCTO";
+            this.DESC_PRODUCTO.Name = "DESC_PRODUCTO";
+            this.DESC_PRODUCTO.Width = 500;
+            // 
+            // CANTIDAD
+            // 
+            this.CANTIDAD.Frozen = true;
+            this.CANTIDAD.HeaderText = "CANTIDAD";
+            this.CANTIDAD.Name = "CANTIDAD";
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.Frozen = true;
+            this.PRECIO.HeaderText = "PRECIO";
+            this.PRECIO.Name = "PRECIO";
+            this.PRECIO.Width = 175;
+            // 
+            // TOTALS
+            // 
+            this.TOTALS.Frozen = true;
+            this.TOTALS.HeaderText = "TOTAL";
+            this.TOTALS.Name = "TOTALS";
+            this.TOTALS.Width = 200;
             // 
             // label1
             // 
@@ -223,10 +322,10 @@ namespace prj_Presentacion
             this.BtnTipo.ForeColor = System.Drawing.Color.White;
             this.BtnTipo.Image = global::prj_Presentacion.Properties.Resources.save_48;
             this.BtnTipo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnTipo.Location = new System.Drawing.Point(17, 471);
+            this.BtnTipo.Location = new System.Drawing.Point(300, 471);
             this.BtnTipo.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTipo.Name = "BtnTipo";
-            this.BtnTipo.Size = new System.Drawing.Size(947, 63);
+            this.BtnTipo.Size = new System.Drawing.Size(390, 63);
             this.BtnTipo.TabIndex = 78;
             this.BtnTipo.Text = "GUARDAR";
             this.BtnTipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -251,30 +350,6 @@ namespace prj_Presentacion
             this.settingsButton.UseVisualStyleBackColor = false;
             this.settingsButton.Click += new System.EventHandler(this.settingsButton_Click);
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(464, 25);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(110, 17);
-            this.label4.TabIndex = 11;
-            this.label4.Text = "EN EXISTENCIA";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txt_cantidad
-            // 
-            this.txt_cantidad.AutoSize = true;
-            this.txt_cantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_cantidad.Location = new System.Drawing.Point(577, 17);
-            this.txt_cantidad.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txt_cantidad.Name = "txt_cantidad";
-            this.txt_cantidad.Size = new System.Drawing.Size(68, 31);
-            this.txt_cantidad.TabIndex = 12;
-            this.txt_cantidad.Text = "XXX";
-            this.txt_cantidad.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
@@ -295,19 +370,67 @@ namespace prj_Presentacion
             this.pictureBox2.TabIndex = 80;
             this.pictureBox2.TabStop = false;
             // 
+            // txt_descuento
+            // 
+            this.txt_descuento.AutoSize = true;
+            this.txt_descuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_descuento.Location = new System.Drawing.Point(76, 466);
+            this.txt_descuento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txt_descuento.Name = "txt_descuento";
+            this.txt_descuento.Size = new System.Drawing.Size(94, 17);
+            this.txt_descuento.TabIndex = 13;
+            this.txt_descuento.Text = "DESCUENTO";
+            this.txt_descuento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txb_descuento
+            // 
+            this.txb_descuento.Location = new System.Drawing.Point(174, 464);
+            this.txb_descuento.Margin = new System.Windows.Forms.Padding(2);
+            this.txb_descuento.Name = "txb_descuento";
+            this.txb_descuento.Size = new System.Drawing.Size(88, 22);
+            this.txb_descuento.TabIndex = 82;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(747, 461);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(124, 17);
+            this.label6.TabIndex = 83;
+            this.label6.Text = "TOTAL GENERAL";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtTotalGeneral
+            // 
+            this.txtTotalGeneral.AutoSize = true;
+            this.txtTotalGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTotalGeneral.Location = new System.Drawing.Point(865, 457);
+            this.txtTotalGeneral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtTotalGeneral.Name = "txtTotalGeneral";
+            this.txtTotalGeneral.Size = new System.Drawing.Size(54, 25);
+            this.txtTotalGeneral.TabIndex = 13;
+            this.txtTotalGeneral.Text = "XXX";
+            this.txtTotalGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(987, 576);
+            this.Controls.Add(this.txtTotalGeneral);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.txb_descuento);
+            this.Controls.Add(this.txt_descuento);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.BtnTipo);
-            this.Controls.Add(this.datalistadoarticulos);
+            this.Controls.Add(this.Dg_Detalles);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
@@ -318,8 +441,8 @@ namespace prj_Presentacion
             this.Load += new System.EventHandler(this.Shop_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.upDownCantidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Dg_Detalles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -332,13 +455,13 @@ namespace prj_Presentacion
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox CbArticulos;
-        private System.Windows.Forms.NumericUpDown cantidad;
-        private System.Windows.Forms.Button BtnBuscar;
+        private System.Windows.Forms.NumericUpDown upDownCantidad;
+        private System.Windows.Forms.Button BtnAgregar;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button logOutButton;
         private System.Windows.Forms.Button BtnTipo;
-        private System.Windows.Forms.DataGridView datalistadoarticulos;
+        private System.Windows.Forms.DataGridView Dg_Detalles;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button settingsButton;
@@ -346,5 +469,14 @@ namespace prj_Presentacion
         private System.Windows.Forms.Label txt_cantidad;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ID_ARTICULO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DESC_PRODUCTO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CANTIDAD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TOTALS;
+        private System.Windows.Forms.Label txt_descuento;
+        private System.Windows.Forms.TextBox txb_descuento;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label txtTotalGeneral;
     }
 }
