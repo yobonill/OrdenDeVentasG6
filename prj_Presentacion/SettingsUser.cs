@@ -217,7 +217,9 @@ namespace prj_Presentacion
 
         private void BtnRoles_Click(object sender, EventArgs e)
         {
-        
+            this.Hide();
+            Roles cargar = new Roles();
+            cargar.ShowDialog();
         }
         private void button1_Click(object sender, EventArgs e)
         {

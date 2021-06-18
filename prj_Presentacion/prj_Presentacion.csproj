@@ -64,6 +64,12 @@
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantRol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantRol.Designer.cs">
+      <DependentUpon>MantRol.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="Reports.Designer.cs">
       <DependentUpon>Reports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Roles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Roles.Designer.cs">
+      <DependentUpon>Roles.cs</DependentUpon>
     </Compile>
     <Compile Include="Settings.cs">
       <SubType>Form</SubType>
@@ -114,6 +126,9 @@
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantRol.resx">
+      <DependentUpon>MantRol.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantUsuario.resx">
       <DependentUpon>MantUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +144,9 @@
     </Compile>
     <EmbeddedResource Include="Reports.resx">
       <DependentUpon>Reports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Roles.resx">
+      <DependentUpon>Roles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Settings.resx">
       <DependentUpon>Settings.cs</DependentUpon>

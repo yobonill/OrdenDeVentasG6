@@ -59,9 +59,9 @@ namespace prj_Presentacion
         public bool validar()
         {
             ClearErrors();
-            if (string.IsNullOrEmpty(this.idusuarioTextBox.Text))
+            if (string.IsNullOrEmpty(this.usuarioTextBox.Text))
             {
-                this.errorProvider1.SetError(this.idusuarioTextBox, ValidatorMessages.FIELD_REQUIRED);
+                this.errorProvider1.SetError(this.usuarioTextBox, ValidatorMessages.FIELD_REQUIRED);
                 valor = false;
             }
             else
@@ -74,7 +74,7 @@ namespace prj_Presentacion
 
         private void ClearErrors()
         {
-            this.errorProvider1.SetError(this.idusuarioTextBox, null);
+            this.errorProvider1.SetError(this.usuarioTextBox, null);
         }
 
 
@@ -311,7 +311,7 @@ namespace prj_Presentacion
 
         private void BtnAyuda_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start(@"c:\Ayuda\matenimiento a usuarios.Pdf");
+            System.Diagnostics.Process.Start(@"c:\Ayuda\Matenimiento_a_usuarios.pdf");
         }
 
         private void BtnImprimir_Click(object sender, EventArgs e)

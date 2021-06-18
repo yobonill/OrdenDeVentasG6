@@ -47,3 +47,5 @@ C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\P
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.exe
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.pdb
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.MantUsuario.resources
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.MantRol.resources
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.Roles.resources

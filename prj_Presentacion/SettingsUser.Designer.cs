@@ -79,7 +79,7 @@ namespace prj_Presentacion
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(646, 63);
             this.label1.TabIndex = 34;
-            this.label1.Text = "Configuracion de usuario";
+            this.label1.Text = "Configuración de usuario";
             // 
             // label2
             // 
@@ -402,9 +402,9 @@ namespace prj_Presentacion
             // LblUsuario
             // 
             this.LblUsuario.AutoSize = true;
-            this.LblUsuario.BackColor = System.Drawing.Color.Black;
+            this.LblUsuario.BackColor = System.Drawing.Color.Transparent;
             this.LblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblUsuario.Location = new System.Drawing.Point(61, 675);
+            this.LblUsuario.Location = new System.Drawing.Point(61, 648);
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(64, 17);
             this.LblUsuario.TabIndex = 61;
@@ -480,7 +480,7 @@ namespace prj_Presentacion
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(57, 586);
+            this.label9.Location = new System.Drawing.Point(57, 627);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(285, 18);
             this.label9.TabIndex = 65;
