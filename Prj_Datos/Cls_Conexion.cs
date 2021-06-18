@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace Prj_Datos
 {
-    class Cls_Conexion
+    // clase era provada imposible conectar con clases DAL cambiada a publica, Merge will be needed
+    // Referencia video 3, tiempo: 01:05:00
+    public class Cls_Conexion
     {
         public SqlConnection cn { get; set; }
         public static string ConectarSql()

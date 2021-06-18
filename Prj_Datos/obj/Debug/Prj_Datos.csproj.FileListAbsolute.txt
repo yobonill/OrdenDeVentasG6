@@ -9,3 +9,14 @@ C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\Practi
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Datos\bin\Debug\Prj_Entidades.pdb
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Datos\obj\Debug\Prj_Datos.csprojAssemblyReference.cache
 C:\Users\Yisel Taveras\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\Prj_Datos\obj\Debug\Prj_Datos.csproj.CopyComplete
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\bin\Debug\Prj_Datos.exe
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\bin\Debug\Prj_Datos.pdb
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\bin\Debug\Prj_Entidades.exe
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\bin\Debug\Prj_Entidades.pdb
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.csprojAssemblyReference.cache
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.Properties.Resources.resources
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.GenerateResource.cache
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.CoreCompileInputs.cache
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.CopyComplete
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.exe
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.pdb
