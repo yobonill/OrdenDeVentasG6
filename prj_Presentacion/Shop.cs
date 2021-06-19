@@ -37,20 +37,51 @@ namespace prj_Presentacion
 
         private void txbDescuento_Leave_1(object sender, EventArgs e)
         {
-            if(txbDescuento.Text.Contains("%"))
+            if (txbDescuento.Text.Contains("%"))
             {
                 string desc = txbDescuento.Text.Replace("%", "");
-
-                double calcdesc = (Convert.ToInt32(desc) * totalGeneral) / 100;
-                descuentoGeneral = calcdesc;
-                calculateAll();
+                int number;
+                bool success = Int32.TryParse(desc, out number);
+                if (!success)
+                {
+                    MessageBox.Show("Favor introducir un valor correcto");
+                    txbDescuento.Text = "";
+                    desc = "";
+                }
+                if (desc == "")
+                {
+                    descuentoGeneral = 0;
+                    calculateAll();
+                }
+                else
+                {
+                    double calcdesc = (Convert.ToInt32(desc) * totalGeneral) / 100;
+                    descuentoGeneral = calcdesc;
+                    calculateAll();
+                }
                 //txbDescuento.Text = calcdesc.ToString();
                 //totalNeto = totalGeneral -calcdesc;
                 //txtTotalGeneral.Text = totalNeto.ToString();
-            } else
+            } 
+            else
             {
-                descuentoGeneral = Convert.ToDouble(txbDescuento.Text);
-                calculateAll();
+                int number;
+                bool success = Int32.TryParse(txbDescuento.Text, out number);
+                if (!success)
+                {
+                    MessageBox.Show("Favor introducir un valor correcto");
+                    txbDescuento.Text = "";
+                }
+                if (txbDescuento.Text == "")
+                {
+                    descuentoGeneral = 0;
+                    calculateAll();
+                }
+                else
+                {
+                    descuentoGeneral = Convert.ToDouble(txbDescuento.Text);
+                    calculateAll();
+                }
                 //totalNeto = totalGeneral - Convert.ToInt32(txbDescuento.Text);
                 //txtTotalGeneral.Text = totalNeto.ToString();
             }
@@ -69,8 +100,16 @@ namespace prj_Presentacion
             }
         }
 
-        private void calculateAll()
+        private void calculateAll(string remove = "")
         {
+            if(remove != "")
+            {
+                itbisGeneral = totalGeneral * 0.18;
+            }
+            if (Ck_Itbis.Checked == true)
+            {
+                itbisGeneral = totalGeneral * 0.18;
+            }
             TxtItbis.Text = itbisGeneral.ToString();
             txbDescuento.Text = descuentoGeneral.ToString();
             if(descuentoGeneral > (totalGeneral+itbisGeneral)) {
@@ -96,6 +135,44 @@ namespace prj_Presentacion
             cargar.ShowDialog();
         }
 
+        private void Dg_Detalles_AllowUserToDeleteRowsChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Dg_Detalles_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (this.Dg_Detalles.Rows.Count > 0)
+                {
+
+                    if (MessageBox.Show("¿Está seguro de quitar de la lista el producto con el codigo " + Dg_Detalles.Rows[Dg_Detalles.CurrentRow.Index].Cells[0].Value.ToString() + "?", "Quitar Producto de lista", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        totalGeneral = totalGeneral - Convert.ToDouble(Dg_Detalles.Rows[Dg_Detalles.CurrentRow.Index].Cells[4].Value);
+                        Dg_Detalles.Rows.RemoveAt(Dg_Detalles.CurrentRow.Index);
+                        calculateAll("edit");
+                        if (this.Dg_Detalles.Rows.Count == 0)
+                        {
+                            BtnRegistrarFactura.Enabled = false;
+                        }
+                    }
+                }
+                else
+                {
+                    BtnRegistrarFactura.Enabled = false;
+                    MessageBox.Show("No existen Productos registrados, para eliminar");
+                    calculateAll();
+                }
+            }
+
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         private void Shop_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'datSistema.persona' table. You can move, or remove it, as needed.
@@ -106,6 +183,7 @@ namespace prj_Presentacion
                 CbArticulos.DataSource = ds.articulo;
                 CbArticulos.DisplayMember = "nombre";
                 CbArticulos.ValueMember = "idarticulo";
+                CbArticulosChanged();
 
                 // Bind the SelectedValueChanged event to our handler for it.
                 CbArticulos.SelectedValueChanged +=
@@ -117,7 +195,7 @@ namespace prj_Presentacion
                 MessageBox.Show(ex.Message);
             }
         }
-        private void CbArticulos_SelectedValueChanged(object sender, EventArgs e)
+        private void CbArticulosChanged()
         {
             try
             {
@@ -125,6 +203,7 @@ namespace prj_Presentacion
                 {
                     //txt_cantidad.Text = CbArticulos.SelectedValue.ToString();
                     //cantidad.Maximum = Convert.ToInt16(CbArticulos.SelectedValue);
+                    BtnAgregar.Enabled = true;
 
                     RecordArticulos Rec2 = new RecordArticulos(Convert.ToInt16(CbArticulos.SelectedValue), 0);
 
@@ -139,6 +218,10 @@ namespace prj_Presentacion
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+        private void CbArticulos_SelectedValueChanged(object sender, EventArgs e)
+        {
+            CbArticulosChanged();
         }
         private void SetupColumns()
         {
@@ -213,6 +296,7 @@ namespace prj_Presentacion
                 total = (Convert.ToInt32(upDownCantidad.Value) * Convert.ToInt32(Rec2.PRECIO_VENTA1));
                 totalGeneral = totalGeneral + total;
                 calculateAll();
+                BtnRegistrarFactura.Enabled = true;
                 //txtTotalGeneral.Text = totalGeneral.ToString();
                 FSP_unEvento(Rec2.CODIGO1, Rec2.DESCRIPCION1, upDownCantidad.Value.ToString(), Rec2.PRECIO_VENTA1.ToString(), total.ToString());
             }

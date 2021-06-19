@@ -30,9 +30,9 @@ namespace prj_Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_cantidad = new System.Windows.Forms.Label();
@@ -51,7 +51,7 @@ namespace prj_Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
-            this.BtnTipo = new System.Windows.Forms.Button();
+            this.BtnRegistrarFactura = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -69,6 +69,7 @@ namespace prj_Presentacion
             this.Ck_Itbis = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
             this.Ck_ncf = new System.Windows.Forms.CheckBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Detalles)).BeginInit();
@@ -139,6 +140,7 @@ namespace prj_Presentacion
             this.CbArticulos.Name = "CbArticulos";
             this.CbArticulos.Size = new System.Drawing.Size(201, 24);
             this.CbArticulos.TabIndex = 10;
+            this.CbArticulos.Text = "Seleccione un articulo";
             // 
             // upDownCantidad
             // 
@@ -156,6 +158,7 @@ namespace prj_Presentacion
             // 
             this.BtnAgregar.BackColor = System.Drawing.Color.MidnightBlue;
             this.BtnAgregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnAgregar.Enabled = false;
             this.BtnAgregar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
             this.BtnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
             this.BtnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -192,14 +195,14 @@ namespace prj_Presentacion
             this.Dg_Detalles.AllowUserToResizeColumns = false;
             this.Dg_Detalles.AllowUserToResizeRows = false;
             this.Dg_Detalles.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dg_Detalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dg_Detalles.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Dg_Detalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dg_Detalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID_ARTICULO,
@@ -207,30 +210,32 @@ namespace prj_Presentacion
             this.CANTIDAD,
             this.PRECIO,
             this.TOTALS});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dg_Detalles.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dg_Detalles.DefaultCellStyle = dataGridViewCellStyle8;
             this.Dg_Detalles.Location = new System.Drawing.Point(17, 187);
             this.Dg_Detalles.Margin = new System.Windows.Forms.Padding(2);
             this.Dg_Detalles.Name = "Dg_Detalles";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dg_Detalles.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dg_Detalles.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.Dg_Detalles.RowHeadersVisible = false;
             this.Dg_Detalles.RowHeadersWidth = 51;
             this.Dg_Detalles.RowTemplate.Height = 24;
             this.Dg_Detalles.Size = new System.Drawing.Size(947, 264);
             this.Dg_Detalles.TabIndex = 74;
+            this.Dg_Detalles.AllowUserToDeleteRowsChanged += new System.EventHandler(this.Dg_Detalles_AllowUserToDeleteRowsChanged);
+            this.Dg_Detalles.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dg_Detalles_CellDoubleClick);
             // 
             // ID_ARTICULO
             // 
@@ -324,25 +329,26 @@ namespace prj_Presentacion
             this.logOutButton.UseVisualStyleBackColor = false;
             this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
-            // BtnTipo
+            // BtnRegistrarFactura
             // 
-            this.BtnTipo.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BtnTipo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnTipo.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
-            this.BtnTipo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.BtnTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnTipo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTipo.ForeColor = System.Drawing.Color.White;
-            this.BtnTipo.Image = global::prj_Presentacion.Properties.Resources.save_48;
-            this.BtnTipo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnTipo.Location = new System.Drawing.Point(300, 463);
-            this.BtnTipo.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnTipo.Name = "BtnTipo";
-            this.BtnTipo.Size = new System.Drawing.Size(390, 63);
-            this.BtnTipo.TabIndex = 78;
-            this.BtnTipo.Text = "GUARDAR";
-            this.BtnTipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnTipo.UseVisualStyleBackColor = false;
+            this.BtnRegistrarFactura.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnRegistrarFactura.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnRegistrarFactura.Enabled = false;
+            this.BtnRegistrarFactura.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnRegistrarFactura.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnRegistrarFactura.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnRegistrarFactura.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRegistrarFactura.ForeColor = System.Drawing.Color.White;
+            this.BtnRegistrarFactura.Image = global::prj_Presentacion.Properties.Resources.save_48;
+            this.BtnRegistrarFactura.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnRegistrarFactura.Location = new System.Drawing.Point(300, 463);
+            this.BtnRegistrarFactura.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnRegistrarFactura.Name = "BtnRegistrarFactura";
+            this.BtnRegistrarFactura.Size = new System.Drawing.Size(390, 63);
+            this.BtnRegistrarFactura.TabIndex = 78;
+            this.BtnRegistrarFactura.Text = "GUARDAR";
+            this.BtnRegistrarFactura.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnRegistrarFactura.UseVisualStyleBackColor = false;
             // 
             // settingsButton
             // 
@@ -519,12 +525,26 @@ namespace prj_Presentacion
             this.Ck_ncf.TabIndex = 364;
             this.Ck_ncf.UseVisualStyleBackColor = true;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label10.Location = new System.Drawing.Point(297, 192);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(182, 13);
+            this.label10.TabIndex = 366;
+            this.label10.Text = "Doble click en registro para eliminarlo";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(987, 576);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Ck_ncf);
             this.Controls.Add(this.TxtItbis);
@@ -541,7 +561,7 @@ namespace prj_Presentacion
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.logOutButton);
-            this.Controls.Add(this.BtnTipo);
+            this.Controls.Add(this.BtnRegistrarFactura);
             this.Controls.Add(this.Dg_Detalles);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label3);
@@ -574,7 +594,7 @@ namespace prj_Presentacion
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button logOutButton;
-        private System.Windows.Forms.Button BtnTipo;
+        private System.Windows.Forms.Button BtnRegistrarFactura;
         private System.Windows.Forms.DataGridView Dg_Detalles;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
@@ -602,5 +622,6 @@ namespace prj_Presentacion
         internal System.Windows.Forms.CheckBox Ck_Itbis;
         internal System.Windows.Forms.Label label9;
         internal System.Windows.Forms.CheckBox Ck_ncf;
+        private System.Windows.Forms.Label label10;
     }
 }
