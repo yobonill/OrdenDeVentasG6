@@ -18,8 +18,8 @@ namespace prj_Presentacion
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new LogIn());
             //Application.Run(new mainMenu());
-            //Application.Run(new SettingsUser());
-            Application.Run(new Roles());
+            //Application.Run(new Settings());
+            Application.Run(new SettingsPersonas());
         }
     }
 }

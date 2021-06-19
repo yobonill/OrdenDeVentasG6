@@ -49,3 +49,4 @@ C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\p
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.MantUsuario.resources
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.MantRol.resources
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.Roles.resources
+C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\prj_Presentacion\obj\Debug\prj_Presentacion.MantPersona.resources

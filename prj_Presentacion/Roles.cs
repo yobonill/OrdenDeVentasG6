@@ -94,7 +94,7 @@ namespace prj_Presentacion
         }
 
 
-        private void TmrHora_Tick_1(object sender, EventArgs e)
+        private void TmrHora_Tick(object sender, EventArgs e)
         {
             LblHora2.Text = DateTime.Now.ToString("hh:mm");
         }
@@ -136,7 +136,7 @@ namespace prj_Presentacion
             // Set the background color for all rows and for alternating rows.  
             // The value for alternating rows overrides the value for all rows. 
             datalistadorol.RowsDefaultCellStyle.BackColor = Color.White;
-            datalistadorol.AlternatingRowsDefaultCellStyle.BackColor = Color.Aqua;
+            datalistadorol.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
 
             // Set the row and column header styles.
             datalistadorol.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
@@ -177,10 +177,10 @@ namespace prj_Presentacion
         }
  
 
-        private void TmrMensaje_Tick(object sender, EventArgs e)
+       private void TmrMensaje_Tick(object sender, EventArgs e)
         {
             this.Text = this.Text.Substring(1) + this.Text.Substring(0, 1);
-        }
+        } 
 
         private void backButton2_Click(object sender, EventArgs e)
         {
@@ -192,7 +192,7 @@ namespace prj_Presentacion
         private void button2_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            Settings cargar = new Settings();
+            LogIn cargar = new LogIn();
             cargar.ShowDialog();
         }
 
@@ -399,7 +399,6 @@ namespace prj_Presentacion
             }
         }
 
-   
     }
 }
 

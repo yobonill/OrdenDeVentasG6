@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatUsuario.cs">
+      <DependentUpon>DatUsuario.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatUsuario.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -63,6 +66,12 @@
     </Compile>
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantPersona.Designer.cs">
+      <DependentUpon>MantPersona.cs</DependentUpon>
     </Compile>
     <Compile Include="MantRol.cs">
       <SubType>Form</SubType>
@@ -125,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantPersona.resx">
+      <DependentUpon>MantPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantRol.resx">
       <DependentUpon>MantRol.cs</DependentUpon>

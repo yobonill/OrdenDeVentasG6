@@ -306,7 +306,7 @@ namespace prj_Presentacion
             // Set the background color for all rows and for alternating rows.  
             // The value for alternating rows overrides the value for all rows. 
             datalistadousuarios.RowsDefaultCellStyle.BackColor = Color.White;
-            datalistadousuarios.AlternatingRowsDefaultCellStyle.BackColor = Color.Aqua;
+            datalistadousuarios.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
             
             // Set the row and column header styles.
             datalistadousuarios.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
@@ -389,7 +389,7 @@ namespace prj_Presentacion
         private void Cerrar_Click(object sender, EventArgs e)
         {
             this.Hide();
-            mainMenu cargar = new mainMenu();
+            LogIn cargar = new LogIn();
             cargar.ShowDialog();
         }
 

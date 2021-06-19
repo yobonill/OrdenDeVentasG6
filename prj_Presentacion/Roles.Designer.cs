@@ -122,6 +122,7 @@
             // TmrHora
             // 
             this.TmrHora.Enabled = true;
+            this.TmrHora.Tick += new System.EventHandler(this.TmrHora_Tick);
             // 
             // label9
             // 
@@ -550,6 +551,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1316, 709);
+            this.ControlBox = false;
             this.Controls.Add(this.label13);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.LblHora2);

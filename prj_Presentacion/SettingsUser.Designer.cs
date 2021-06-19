@@ -54,7 +54,6 @@ namespace prj_Presentacion
             this.BtnRoles = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.LblUsuario = new System.Windows.Forms.Label();
             this.TmrHora = new System.Windows.Forms.Timer(this.components);
             this.LblFecha = new System.Windows.Forms.Label();
             this.LblHora = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@ namespace prj_Presentacion
             this.Lbltotal = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.Tmr2click = new System.Windows.Forms.Timer(this.components);
+            this.LblUsuario = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadousuarios)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -88,7 +88,7 @@ namespace prj_Presentacion
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(1017, 672);
+            this.label2.Location = new System.Drawing.Point(1017, 692);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(257, 29);
@@ -399,17 +399,6 @@ namespace prj_Presentacion
             this.label6.TabIndex = 60;
             this.label6.Text = "Registros Cargados:";
             // 
-            // LblUsuario
-            // 
-            this.LblUsuario.AutoSize = true;
-            this.LblUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.LblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.LblUsuario.Location = new System.Drawing.Point(61, 648);
-            this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(64, 17);
-            this.LblUsuario.TabIndex = 61;
-            this.LblUsuario.Text = "Logeado";
-            // 
             // TmrHora
             // 
             this.TmrHora.Tick += new System.EventHandler(this.TmrHora_Tick_1);
@@ -447,10 +436,10 @@ namespace prj_Presentacion
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 663);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 658);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(1316, 46);
+            this.pictureBox3.Size = new System.Drawing.Size(1316, 51);
             this.pictureBox3.TabIndex = 30;
             this.pictureBox3.TabStop = false;
             // 
@@ -493,12 +482,24 @@ namespace prj_Presentacion
             this.Tmr2click.Interval = 250;
             this.Tmr2click.Tick += new System.EventHandler(this.Tmr2click_Tick);
             // 
+            // LblUsuario
+            // 
+            this.LblUsuario.AutoSize = true;
+            this.LblUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.LblUsuario.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LblUsuario.Location = new System.Drawing.Point(-49, 628);
+            this.LblUsuario.Name = "LblUsuario";
+            this.LblUsuario.Size = new System.Drawing.Size(64, 17);
+            this.LblUsuario.TabIndex = 61;
+            this.LblUsuario.Text = "Logeado";
+            // 
             // SettingsUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1316, 709);
+            this.ControlBox = false;
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Lbltotal);
             this.Controls.Add(this.LblHora);
@@ -561,7 +562,6 @@ namespace prj_Presentacion
         private System.Windows.Forms.Button Cerrar;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label LblUsuario;
         private System.Windows.Forms.Timer TmrHora;
         private System.Windows.Forms.Label LblFecha;
         private System.Windows.Forms.Label LblHora;
@@ -569,5 +569,6 @@ namespace prj_Presentacion
         private System.Windows.Forms.Label Lbltotal;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Timer Tmr2click;
+        private System.Windows.Forms.Label LblUsuario;
     }
 }
