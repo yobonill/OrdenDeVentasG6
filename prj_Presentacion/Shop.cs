@@ -16,7 +16,10 @@ namespace prj_Presentacion
     {
         public string _Usuario;
         public int contador = 1;
-        public double total, cctasa, totalGeneral, subtotal, Tmp_precio, Tmp_Subtotal, Tmp_Itbis;
+        public double total, cctasa, totalNeto, subtotal, Tmp_precio, Tmp_Subtotal;
+        public double totalGeneral = 0;
+        public double itbisGeneral = 0;
+        public double descuentoGeneral = 0;
         DatSistema ds = new DatSistema();
         DatSistemaTableAdapters.articuloTableAdapter consulta = new DatSistemaTableAdapters.articuloTableAdapter();
         public Shop(string loggedUser)
@@ -30,6 +33,53 @@ namespace prj_Presentacion
             this.Hide();
             mainMenu cargar = new mainMenu(_Usuario);
             cargar.ShowDialog();
+        }
+
+        private void txbDescuento_Leave_1(object sender, EventArgs e)
+        {
+            if(txbDescuento.Text.Contains("%"))
+            {
+                string desc = txbDescuento.Text.Replace("%", "");
+
+                double calcdesc = (Convert.ToInt32(desc) * totalGeneral) / 100;
+                descuentoGeneral = calcdesc;
+                calculateAll();
+                //txbDescuento.Text = calcdesc.ToString();
+                //totalNeto = totalGeneral -calcdesc;
+                //txtTotalGeneral.Text = totalNeto.ToString();
+            } else
+            {
+                descuentoGeneral = Convert.ToDouble(txbDescuento.Text);
+                calculateAll();
+                //totalNeto = totalGeneral - Convert.ToInt32(txbDescuento.Text);
+                //txtTotalGeneral.Text = totalNeto.ToString();
+            }
+        }
+
+        private void Ck_Itbis_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Ck_Itbis.Checked == true)
+            {
+                itbisGeneral = totalGeneral * 0.18;
+                calculateAll();
+            } else
+            {
+                itbisGeneral = 0;
+                calculateAll();
+            }
+        }
+
+        private void calculateAll()
+        {
+            TxtItbis.Text = itbisGeneral.ToString();
+            txbDescuento.Text = descuentoGeneral.ToString();
+            if(descuentoGeneral > (totalGeneral+itbisGeneral)) {
+                MessageBox.Show("Descuento no puede ser mayor al total de la compra");
+                descuentoGeneral = 0;
+                txbDescuento.Text = "";
+                calculateAll();
+            }
+            txtTotalGeneral.Text = (totalGeneral+itbisGeneral-descuentoGeneral).ToString();
         }
 
         private void logOutButton_Click(object sender, EventArgs e)
@@ -48,6 +98,8 @@ namespace prj_Presentacion
 
         private void Shop_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'datSistema.persona' table. You can move, or remove it, as needed.
+            this.personaTableAdapter.Fill(this.datSistema.persona);
             try
             {
                 consulta.Fill(ds.articulo);
@@ -150,17 +202,18 @@ namespace prj_Presentacion
 
         private void BtnBuscar_Click(object sender, EventArgs e)
         {
-            if (Convert.ToInt16(upDownCantidad.Value) > Convert.ToInt16(txt_cantidad.Text))
+            if (Convert.ToInt32(upDownCantidad.Value) > Convert.ToInt32(txt_cantidad.Text))
             {
                 MessageBox.Show("Cantidad a Despachar es mayor que la existencia");
             }
             else
             {
-                RecordArticulos Rec2 = new RecordArticulos(Convert.ToInt16(CbArticulos.SelectedValue), 0);
+                RecordArticulos Rec2 = new RecordArticulos(Convert.ToInt32(CbArticulos.SelectedValue), 0);
 
                 total = (Convert.ToInt32(upDownCantidad.Value) * Convert.ToInt32(Rec2.PRECIO_VENTA1));
                 totalGeneral = totalGeneral + total;
-                txtTotalGeneral.Text = totalGeneral.ToString();
+                calculateAll();
+                //txtTotalGeneral.Text = totalGeneral.ToString();
                 FSP_unEvento(Rec2.CODIGO1, Rec2.DESCRIPCION1, upDownCantidad.Value.ToString(), Rec2.PRECIO_VENTA1.ToString(), total.ToString());
             }
         }
@@ -175,11 +228,11 @@ namespace prj_Presentacion
                     {
                         go = 0;
                         //MessageBox.Show("El articulo " + row.Cells[1].Value.ToString() + " ya esta agregado");
-                        if (Convert.ToInt16(Convert.ToInt16(row.Cells[2].Value) + Convert.ToInt16(Cant)) > Convert.ToInt16(txt_cantidad.Text))
+                        if (Convert.ToInt16(Convert.ToInt32(row.Cells[2].Value) + Convert.ToInt32(Cant)) > Convert.ToInt32(txt_cantidad.Text))
                         {
                             MessageBox.Show("Cantidad a Despachar es mayor que la existencia");
                         } else { 
-                            row.Cells[2].Value = Convert.ToInt16(row.Cells[2].Value) + Convert.ToInt16(Cant);
+                            row.Cells[2].Value = Convert.ToInt32(row.Cells[2].Value) + Convert.ToInt32(Cant);
                             row.Cells[4].Value = Convert.ToInt32(row.Cells[2].Value) * Convert.ToInt32(row.Cells[3].Value);
                         }
                     }

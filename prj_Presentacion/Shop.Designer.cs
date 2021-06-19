@@ -29,6 +29,7 @@ namespace prj_Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -55,14 +56,26 @@ namespace prj_Presentacion
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txt_descuento = new System.Windows.Forms.Label();
-            this.txb_descuento = new System.Windows.Forms.TextBox();
+            this.txbDescuento = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtTotalGeneral = new System.Windows.Forms.Label();
+            this.CbClientes = new System.Windows.Forms.ComboBox();
+            this.personaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.datSistema = new prj_Presentacion.DatSistema();
+            this.label5 = new System.Windows.Forms.Label();
+            this.personaTableAdapter = new prj_Presentacion.DatSistemaTableAdapters.personaTableAdapter();
+            this.TxtItbis = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.Ck_Itbis = new System.Windows.Forms.CheckBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.Ck_ncf = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.upDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Detalles)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datSistema)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
@@ -129,7 +142,7 @@ namespace prj_Presentacion
             // 
             // upDownCantidad
             // 
-            this.upDownCantidad.Location = new System.Drawing.Point(412, 24);
+            this.upDownCantidad.Location = new System.Drawing.Point(412, 22);
             this.upDownCantidad.Name = "upDownCantidad";
             this.upDownCantidad.Size = new System.Drawing.Size(32, 22);
             this.upDownCantidad.TabIndex = 9;
@@ -322,7 +335,7 @@ namespace prj_Presentacion
             this.BtnTipo.ForeColor = System.Drawing.Color.White;
             this.BtnTipo.Image = global::prj_Presentacion.Properties.Resources.save_48;
             this.BtnTipo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnTipo.Location = new System.Drawing.Point(300, 471);
+            this.BtnTipo.Location = new System.Drawing.Point(300, 463);
             this.BtnTipo.Margin = new System.Windows.Forms.Padding(2);
             this.BtnTipo.Name = "BtnTipo";
             this.BtnTipo.Size = new System.Drawing.Size(390, 63);
@@ -374,7 +387,7 @@ namespace prj_Presentacion
             // 
             this.txt_descuento.AutoSize = true;
             this.txt_descuento.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_descuento.Location = new System.Drawing.Point(76, 466);
+            this.txt_descuento.Location = new System.Drawing.Point(58, 466);
             this.txt_descuento.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txt_descuento.Name = "txt_descuento";
             this.txt_descuento.Size = new System.Drawing.Size(94, 17);
@@ -382,19 +395,20 @@ namespace prj_Presentacion
             this.txt_descuento.Text = "DESCUENTO";
             this.txt_descuento.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txb_descuento
+            // txbDescuento
             // 
-            this.txb_descuento.Location = new System.Drawing.Point(174, 464);
-            this.txb_descuento.Margin = new System.Windows.Forms.Padding(2);
-            this.txb_descuento.Name = "txb_descuento";
-            this.txb_descuento.Size = new System.Drawing.Size(88, 22);
-            this.txb_descuento.TabIndex = 82;
+            this.txbDescuento.Location = new System.Drawing.Point(156, 464);
+            this.txbDescuento.Margin = new System.Windows.Forms.Padding(2);
+            this.txbDescuento.Name = "txbDescuento";
+            this.txbDescuento.Size = new System.Drawing.Size(106, 22);
+            this.txbDescuento.TabIndex = 82;
+            this.txbDescuento.Leave += new System.EventHandler(this.txbDescuento_Leave_1);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(747, 461);
+            this.label6.Location = new System.Drawing.Point(745, 514);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(124, 17);
@@ -406,7 +420,7 @@ namespace prj_Presentacion
             // 
             this.txtTotalGeneral.AutoSize = true;
             this.txtTotalGeneral.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalGeneral.Location = new System.Drawing.Point(865, 457);
+            this.txtTotalGeneral.Location = new System.Drawing.Point(863, 510);
             this.txtTotalGeneral.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtTotalGeneral.Name = "txtTotalGeneral";
             this.txtTotalGeneral.Size = new System.Drawing.Size(54, 25);
@@ -414,15 +428,113 @@ namespace prj_Presentacion
             this.txtTotalGeneral.Text = "XXX";
             this.txtTotalGeneral.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // CbClientes
+            // 
+            this.CbClientes.DataSource = this.personaBindingSource;
+            this.CbClientes.DisplayMember = "nombre";
+            this.CbClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CbClientes.FormattingEnabled = true;
+            this.CbClientes.Location = new System.Drawing.Point(125, 492);
+            this.CbClientes.Name = "CbClientes";
+            this.CbClientes.Size = new System.Drawing.Size(137, 24);
+            this.CbClientes.TabIndex = 14;
+            // 
+            // personaBindingSource
+            // 
+            this.personaBindingSource.DataMember = "persona";
+            this.personaBindingSource.DataSource = this.datSistema;
+            // 
+            // datSistema
+            // 
+            this.datSistema.DataSetName = "DatSistema";
+            this.datSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(58, 495);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 17);
+            this.label5.TabIndex = 13;
+            this.label5.Text = "CLIENTE";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // personaTableAdapter
+            // 
+            this.personaTableAdapter.ClearBeforeFill = true;
+            // 
+            // TxtItbis
+            // 
+            this.TxtItbis.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.TxtItbis.Location = new System.Drawing.Point(819, 485);
+            this.TxtItbis.Name = "TxtItbis";
+            this.TxtItbis.ReadOnly = true;
+            this.TxtItbis.Size = new System.Drawing.Size(116, 22);
+            this.TxtItbis.TabIndex = 363;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(747, 485);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 20);
+            this.label7.TabIndex = 362;
+            this.label7.Text = "ITBIS";
+            // 
+            // Ck_Itbis
+            // 
+            this.Ck_Itbis.AutoSize = true;
+            this.Ck_Itbis.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ck_Itbis.Location = new System.Drawing.Point(797, 489);
+            this.Ck_Itbis.Name = "Ck_Itbis";
+            this.Ck_Itbis.Size = new System.Drawing.Size(15, 14);
+            this.Ck_Itbis.TabIndex = 361;
+            this.Ck_Itbis.UseVisualStyleBackColor = true;
+            this.Ck_Itbis.CheckedChanged += new System.EventHandler(this.Ck_Itbis_CheckedChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(747, 461);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 20);
+            this.label9.TabIndex = 365;
+            this.label9.Text = "NCF";
+            // 
+            // Ck_ncf
+            // 
+            this.Ck_ncf.AutoSize = true;
+            this.Ck_ncf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ck_ncf.Location = new System.Drawing.Point(797, 465);
+            this.Ck_ncf.Name = "Ck_ncf";
+            this.Ck_ncf.Size = new System.Drawing.Size(15, 14);
+            this.Ck_ncf.TabIndex = 364;
+            this.Ck_ncf.UseVisualStyleBackColor = true;
+            // 
             // Shop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(987, 576);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.Ck_ncf);
+            this.Controls.Add(this.TxtItbis);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.Ck_Itbis);
+            this.Controls.Add(this.CbClientes);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.txtTotalGeneral);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.txb_descuento);
+            this.Controls.Add(this.txbDescuento);
             this.Controls.Add(this.txt_descuento);
             this.Controls.Add(this.settingsButton);
             this.Controls.Add(this.label2);
@@ -445,6 +557,8 @@ namespace prj_Presentacion
             ((System.ComponentModel.ISupportInitialize)(this.Dg_Detalles)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datSistema)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -475,8 +589,18 @@ namespace prj_Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTALS;
         private System.Windows.Forms.Label txt_descuento;
-        private System.Windows.Forms.TextBox txb_descuento;
+        private System.Windows.Forms.TextBox txbDescuento;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label txtTotalGeneral;
+        private System.Windows.Forms.ComboBox CbClientes;
+        private System.Windows.Forms.Label label5;
+        private DatSistema datSistema;
+        private System.Windows.Forms.BindingSource personaBindingSource;
+        private DatSistemaTableAdapters.personaTableAdapter personaTableAdapter;
+        internal System.Windows.Forms.TextBox TxtItbis;
+        internal System.Windows.Forms.Label label7;
+        internal System.Windows.Forms.CheckBox Ck_Itbis;
+        internal System.Windows.Forms.Label label9;
+        internal System.Windows.Forms.CheckBox Ck_ncf;
     }
 }
