@@ -12,9 +12,11 @@ namespace prj_Presentacion
 {
     public partial class SettingsUser : Form
     {
-        public SettingsUser()
+        public string _Usuario;
+        public SettingsUser(string loggedUser)
         {
             InitializeComponent();
+            _Usuario = loggedUser;
         }
 
         private void BtImprimir_Click(object sender, EventArgs e)
@@ -80,8 +82,13 @@ namespace prj_Presentacion
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Settings cargar = new Settings();
+            Settings cargar = new Settings(_Usuario);
             cargar.ShowDialog();
+        }
+
+        private void SettingsUser_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

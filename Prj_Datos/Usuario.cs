@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Prj_Datos
 {
@@ -34,6 +35,8 @@ namespace Prj_Datos
 
                     while (Reader.Read())
                     {
+                        //Console.WriteLine("{0}\t{1}", Reader.GetInt32(0),Reader.GetString(1));
+                        //MessageBox.Show("UserID " + Reader.GetValue(0)); 
                         i++;
                     }
 

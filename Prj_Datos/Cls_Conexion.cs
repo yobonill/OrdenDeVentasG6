@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Prj_Datos
 {
-    class Cls_Conexion
+    public class Cls_Conexion
     {
         public SqlConnection cn { get; set; }
         public static string ConectarSql()

@@ -32,6 +32,8 @@ namespace prj_Presentacion
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.TxtIdentificacion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@ namespace prj_Presentacion
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnTipo = new System.Windows.Forms.Button();
-            this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -98,6 +98,36 @@ namespace prj_Presentacion
             this.label4.Size = new System.Drawing.Size(146, 25);
             this.label4.TabIndex = 9;
             this.label4.Text = "Filtrar personas";
+            // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLimpiar.Image = global::prj_Presentacion.Properties.Resources.brush_32;
+            this.BtnLimpiar.Location = new System.Drawing.Point(902, 17);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(37, 27);
+            this.BtnLimpiar.TabIndex = 8;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Image = global::prj_Presentacion.Properties.Resources.search_32;
+            this.BtnBuscar.Location = new System.Drawing.Point(856, 17);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(37, 27);
+            this.BtnBuscar.TabIndex = 8;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
             // 
             // TxtIdentificacion
             // 
@@ -291,36 +321,6 @@ namespace prj_Presentacion
             this.BtnTipo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.BtnTipo.UseVisualStyleBackColor = false;
             // 
-            // BtnLimpiar
-            // 
-            this.BtnLimpiar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BtnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
-            this.BtnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLimpiar.Image = global::prj_Presentacion.Properties.Resources.brush_32;
-            this.BtnLimpiar.Location = new System.Drawing.Point(902, 17);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(37, 27);
-            this.BtnLimpiar.TabIndex = 8;
-            this.BtnLimpiar.UseVisualStyleBackColor = false;
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
-            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Image = global::prj_Presentacion.Properties.Resources.search_32;
-            this.BtnBuscar.Location = new System.Drawing.Point(856, 17);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(37, 27);
-            this.BtnBuscar.TabIndex = 8;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
@@ -362,6 +362,7 @@ namespace prj_Presentacion
             this.Name = "SettingsPersonas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingsPersonas";
+            this.Load += new System.EventHandler(this.SettingsPersonas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).EndInit();

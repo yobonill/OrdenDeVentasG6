@@ -39,7 +39,7 @@ namespace prj_Presentacion
             if (exist)
             {
                 this.Hide();
-                mainMenu cargar = new mainMenu();
+                mainMenu cargar = new mainMenu(tb_user.Text);
                 cargar.ShowDialog();
                 //Application.Exit();
             }
