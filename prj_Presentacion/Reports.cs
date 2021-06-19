@@ -57,6 +57,8 @@ namespace prj_Presentacion
 
         private void Reports_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'datSistema.facturas' table. You can move, or remove it, as needed.
+            this.facturasTableAdapter.Fill(this.datSistema.facturas);
 
         }
     }

@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 using Prj_Logica;
 using Prj_Datos;
+using Prj_Entidades;
 
 namespace prj_Presentacion
 {
@@ -16,16 +18,19 @@ namespace prj_Presentacion
     {
         public string _Usuario;
         public int contador = 1;
-        public double total, cctasa, totalNeto, subtotal, Tmp_precio, Tmp_Subtotal;
+        public double total, cctasa, totalNeto, subtotal, Tmp_precio, Tmp_Subtotal, Tmp_Itbis;
         public double totalGeneral = 0;
         public double itbisGeneral = 0;
         public double descuentoGeneral = 0;
+        public int ultposicion, TmpCia;
+
         DatSistema ds = new DatSistema();
+        DataSet dsq = new DataSet();
         DatSistemaTableAdapters.articuloTableAdapter consulta = new DatSistemaTableAdapters.articuloTableAdapter();
         public Shop(string loggedUser)
         {
             InitializeComponent();
-            _Usuario = loggedUser;
+            _Usuario = "test";
         }
 
         private void backButton_Click(object sender, EventArgs e)
@@ -33,6 +38,23 @@ namespace prj_Presentacion
             this.Hide();
             mainMenu cargar = new mainMenu(_Usuario);
             cargar.ShowDialog();
+        }
+        private int buscarNumeroPosicion()
+        {
+            FacturaBL consulta = new FacturaBL();
+            dsq = consulta.LlenarFactura();
+
+            if (Convert.ToInt16(dsq.Tables["ultima_posicion"].Rows[0]["valor"]) > 0)
+            {
+                ultposicion = Convert.ToInt16(dsq.Tables["ultima_posicion"].Rows[0]["valor"]) + 1;
+            }
+            else
+            {
+                ultposicion = 1;
+            }
+
+            dsq.Tables["ultima_posicion"].Clear();
+            return ultposicion;
         }
 
         private void txbDescuento_Leave_1(object sender, EventArgs e)
@@ -172,6 +194,121 @@ namespace prj_Presentacion
                 throw;
             }
         }
+        private void BtnRegistrarFactura_Click(object sender, EventArgs e)
+        {
+            
+                FacturaBL RecI = new FacturaBL();
+                EN_Factura RecImp = new EN_Factura();
+
+                //Verificar si existe el No. de Record
+
+                //bool valida = false;
+
+                //valida = RecI.BusquedaRecord(int.Parse(Txt_NumeroFactura.Text));
+
+                //if (valida)
+                //{
+                //    if (validar())
+                //    {
+
+                //        RecImp.Cod_factura = Convert.ToInt16(Txt_NumeroFactura.Text);
+                //        RecImp.ID_CLIENTE1 = Convert.ToInt16(TxtCodCli.Text);
+                //        RecImp.Total = float.Parse(Txt_TotalFacturado.Text);
+                //        RecImp.Fecha_fact = Convert.ToDateTime(Dt_Fecha.Value);
+                //        RecImp.Estatus1 = char.Parse(Txt_est.Text);
+                //        RecImp.IdTpago1 = RetenerIdTipoPago;
+                //        RecImp.Itbis1 = Convert.ToDouble(TxtItbis.Text);
+                //        RecImp.FormaPago1 = Mensaje; ; //RetenerIdtIpoPago;
+                //        RecImp.ID_VENDEDOR1 = int.Parse(Txt_Vendedor.Text);
+
+
+                //        RecI.UpdateRecordImp(RecImp);
+
+                //        MessageBox.Show("Registro actualizado con exito.", "Actualizar", MessageBoxButtons.OK,
+                //            MessageBoxIcon.Information);
+                //        //Txt_NumeroFactura.Focus();
+
+                //        BtNuevo.PerformClick();
+                //    }
+                //}
+                //else
+                //{
+                //Si dicha factura no existe la va a crear
+
+                //if (validar()) //Si los cmpos requeridos no estan llenos, no entra para insertar
+                //{
+
+                RecImp.IDVENTA1 = ultposicion;
+                RecImp.IDCLIENTE1 = Convert.ToInt32(CbClientes.SelectedValue);
+
+                RecImp.IDUSUARIO1 = 1;
+                Random random = new Random();
+                DateTime localDate = DateTime.Now;
+                int NullValue = 00000;
+                if (Ck_ncf.Checked)
+                {
+                    RecImp.TIPO_COMPROBANTE1 = "NCF";
+                    RecImp.SERIE_COMPROBANTE1 = random.Next(9999999).ToString();
+                    RecImp.NUM_COMPROBANTE1 = random.Next(999999999).ToString();
+                } else
+                {
+                    RecImp.TIPO_COMPROBANTE1 = "SINCOMPROBANTE";
+                    RecImp.SERIE_COMPROBANTE1 = NullValue.ToString();
+                    RecImp.NUM_COMPROBANTE1 = NullValue.ToString();
+                }
+ 
+                RecImp.FECHA_HORA1 = Convert.ToDateTime(localDate);
+                RecImp.IMPUESTO1 = Convert.ToDecimal(itbisGeneral);
+                RecImp.TOTAL1 = Convert.ToDecimal(totalGeneral);
+                RecImp.ESTADO1 = "Despachada";
+
+                RecI.RegRecordImp(RecImp);
+                //Grabar Detalles de factura
+                //Se van a recorrer todas las filas que contiene el datagridview
+
+            FacturaDetalleBL RecID = new FacturaDetalleBL();
+                EN_FacturaDetalle RecImpD = new EN_FacturaDetalle();
+
+                if (Dg_Detalles.Rows.Count > 0)
+                {
+                    for (int i = 0; i <= Dg_Detalles.Rows.Count - 1; i++)
+                    {
+                        Tmp_precio = Convert.ToInt32(Dg_Detalles.Rows[i].Cells[3].Value.ToString());
+
+                        Tmp_Subtotal = Convert.ToDouble(Dg_Detalles.Rows[i].Cells[4].Value.ToString());
+
+                        RecImpD.IDVENTA1 = Convert.ToInt32(ultposicion);
+                        RecImpD.IDARTICULO1 = Convert.ToInt32(Dg_Detalles.Rows[i].Cells[0].Value.ToString());
+                        RecImpD.CANTIDAD1 = Convert.ToInt32(Dg_Detalles.Rows[i].Cells[2].Value.ToString());
+                        RecImpD.PRECIO1 = Convert.ToDouble(Tmp_precio);
+                        
+                        RecImpD.DESCUENTO1 = Convert.ToDouble(txbDescuento.Text);
+    
+                        RecID.RegRecordImp(RecImpD);  //Grabar Detatalles de Factura
+
+                        //Rebajar Inventario de Conceptos
+
+                        Articulos_BL RecIC = new Articulos_BL();
+                        EN_Articulos RecImpC = new EN_Articulos();
+
+                        RecImpC.ID_ARTICULO = Convert.ToInt32(CbArticulos.SelectedValue);
+                        RecImpC.Cant_Exist = Convert.ToInt32(Dg_Detalles.Rows[i].Cells[2].Value.ToString());
+
+                        RecIC.RebajarCantidadInventario(RecImpC);  //Rebajar la cantidad del Inventario
+                    }
+
+                    MessageBox.Show("Registro agregado con exito.", "Agregado", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
+                //}
+                //else
+                //{
+                //MessageBox.Show("Hay campos que son obligatorios que se encuentran vacios.", "Error de validación", MessageBoxButtons.OK,
+                // MessageBoxIcon.Error);
+                //}
+                //}
+
+        }
 
         private void Shop_Load(object sender, EventArgs e)
         {
@@ -194,7 +331,10 @@ namespace prj_Presentacion
             {
                 MessageBox.Show(ex.Message);
             }
+
+            buscarNumeroPosicion();
         }
+
         private void CbArticulosChanged()
         {
             try

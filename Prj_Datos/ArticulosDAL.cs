@@ -78,6 +78,9 @@ namespace Prj_Datos
 
         public void RebajarConceptos(EN_Articulos Rec)
         {
+            Acceso AccesoDatos;
+            AccesoDatos = new Acceso();
+
             AccesoDatos.ObtenerConexion().Open();
             using (ComandoSQL = new SqlCommand())
             {

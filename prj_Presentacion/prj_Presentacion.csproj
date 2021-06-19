@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatSistema.cs">
+      <DependentUpon>DatSistema.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DatSistema.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

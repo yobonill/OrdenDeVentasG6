@@ -50,6 +50,8 @@
     <Compile Include="Acceso.cs" />
     <Compile Include="ArticulosDAL.cs" />
     <Compile Include="Cls_Conexion.cs" />
+    <Compile Include="FacturaDAL.cs" />
+    <Compile Include="FacturaDetalleDAL.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecordArticulos.cs" />

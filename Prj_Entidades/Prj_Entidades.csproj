@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EN_Articulos.cs" />
+    <Compile Include="EN_Factura.cs" />
+    <Compile Include="EN_FacturaDetalle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">

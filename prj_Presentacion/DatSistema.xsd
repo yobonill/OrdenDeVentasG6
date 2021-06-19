@@ -177,6 +177,28 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="facturasTableAdapter" GeneratorDataComponentClassName="facturasTableAdapter" Name="facturas" UserDataComponentName="facturasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConectarSQL (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT detalle_venta.idarticulo,venta.fecha_hora,detalle_venta.cantidad,detalle_venta.precio,venta.total  FROM venta 
+INNER JOIN detalle_venta 
+ON venta.idventa = detalle_venta.idventa</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idarticulo" DataSetColumn="idarticulo" />
+              <Mapping SourceColumn="fecha_hora" DataSetColumn="fecha_hora" />
+              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
+              <Mapping SourceColumn="precio" DataSetColumn="precio" />
+              <Mapping SourceColumn="total" DataSetColumn="total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -185,7 +207,7 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
   <xs:element name="DatSistema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatSistema" msprop:Generator_UserDSName="DatSistema">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="articulo" msprop:Generator_TableClassName="articuloDataTable" msprop:Generator_TableVarName="tablearticulo" msprop:Generator_RowChangedName="articuloRowChanged" msprop:Generator_TablePropName="articulo" msprop:Generator_RowDeletingName="articuloRowDeleting" msprop:Generator_RowChangingName="articuloRowChanging" msprop:Generator_RowEvHandlerName="articuloRowChangeEventHandler" msprop:Generator_RowDeletedName="articuloRowDeleted" msprop:Generator_RowClassName="articuloRow" msprop:Generator_UserTableName="articulo" msprop:Generator_RowEvArgName="articuloRowChangeEvent">
+        <xs:element name="articulo" msprop:Generator_TableClassName="articuloDataTable" msprop:Generator_TableVarName="tablearticulo" msprop:Generator_TablePropName="articulo" msprop:Generator_RowDeletingName="articuloRowDeleting" msprop:Generator_RowChangingName="articuloRowChanging" msprop:Generator_RowEvHandlerName="articuloRowChangeEventHandler" msprop:Generator_RowDeletedName="articuloRowDeleted" msprop:Generator_UserTableName="articulo" msprop:Generator_RowChangedName="articuloRowChanged" msprop:Generator_RowEvArgName="articuloRowChangeEvent" msprop:Generator_RowClassName="articuloRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idarticulo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidarticulo" msprop:Generator_ColumnPropNameInRow="idarticulo" msprop:Generator_ColumnPropNameInTable="idarticuloColumn" msprop:Generator_UserColumnName="idarticulo" type="xs:int" />
@@ -217,7 +239,7 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_UserTableName="persona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_RowEvArgName="personaRowChangeEvent" msprop:Generator_RowClassName="personaRow">
+        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_RowClassName="personaRow" msprop:Generator_UserTableName="persona" msprop:Generator_RowEvArgName="personaRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idpersona" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidpersona" msprop:Generator_ColumnPropNameInRow="idpersona" msprop:Generator_ColumnPropNameInTable="idpersonaColumn" msprop:Generator_UserColumnName="idpersona" type="xs:int" />
@@ -273,6 +295,17 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="facturas" msprop:Generator_TableClassName="facturasDataTable" msprop:Generator_TableVarName="tablefacturas" msprop:Generator_TablePropName="facturas" msprop:Generator_RowDeletingName="facturasRowDeleting" msprop:Generator_RowChangingName="facturasRowChanging" msprop:Generator_RowEvHandlerName="facturasRowChangeEventHandler" msprop:Generator_RowDeletedName="facturasRowDeleted" msprop:Generator_UserTableName="facturas" msprop:Generator_RowChangedName="facturasRowChanged" msprop:Generator_RowEvArgName="facturasRowChangeEvent" msprop:Generator_RowClassName="facturasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idarticulo" msprop:Generator_ColumnVarNameInTable="columnidarticulo" msprop:Generator_ColumnPropNameInRow="idarticulo" msprop:Generator_ColumnPropNameInTable="idarticuloColumn" msprop:Generator_UserColumnName="idarticulo" type="xs:int" />
+              <xs:element name="fecha_hora" msprop:Generator_ColumnVarNameInTable="columnfecha_hora" msprop:Generator_ColumnPropNameInRow="fecha_hora" msprop:Generator_ColumnPropNameInTable="fecha_horaColumn" msprop:Generator_UserColumnName="fecha_hora" type="xs:dateTime" />
+              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" />
+              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
+              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -284,4 +317,9 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
       <xs:field xpath="mstns:idpersona" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="FK_IDARTICULO" msdata:parent="articulo" msdata:child="facturas" msdata:parentkey="idarticulo" msdata:childkey="idarticulo" msprop:Generator_UserChildTable="facturas" msprop:Generator_ChildPropName="GetfacturasRows" msprop:Generator_UserRelationName="FK_IDARTICULO" msprop:Generator_ParentPropName="articuloRow" msprop:Generator_RelationVarName="relationFK_IDARTICULO" msprop:Generator_UserParentTable="articulo" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>
