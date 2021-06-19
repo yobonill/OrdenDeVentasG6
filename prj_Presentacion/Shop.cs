@@ -258,7 +258,7 @@ namespace prj_Presentacion
                 }
  
                 RecImp.FECHA_HORA1 = Convert.ToDateTime(localDate);
-                RecImp.IMPUESTO1 = Convert.ToDecimal(itbisGeneral);
+                RecImp.IMPUESTO1 = Convert.ToDecimal(itbisGeneral.ToString());
                 RecImp.TOTAL1 = Convert.ToDecimal(totalGeneral);
                 RecImp.ESTADO1 = "Despachada";
 
