@@ -29,6 +29,7 @@ namespace prj_Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,9 +51,10 @@ namespace prj_Presentacion
             this.label2.BackColor = System.Drawing.Color.Black;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label2.Location = new System.Drawing.Point(763, 546);
+            this.label2.Location = new System.Drawing.Point(1017, 672);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(201, 25);
+            this.label2.Size = new System.Drawing.Size(257, 29);
             this.label2.TabIndex = 23;
             this.label2.Text = "Creado por el grupo 6";
             // 
@@ -62,9 +64,10 @@ namespace prj_Presentacion
             this.label3.BackColor = System.Drawing.Color.Black;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label3.Location = new System.Drawing.Point(12, 11);
+            this.label3.Location = new System.Drawing.Point(16, 14);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(264, 25);
+            this.label3.Size = new System.Drawing.Size(338, 29);
             this.label3.TabIndex = 21;
             this.label3.Text = "Sistema de Orden de Ventas";
             // 
@@ -72,9 +75,10 @@ namespace prj_Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 33F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(350, 52);
+            this.label1.Location = new System.Drawing.Point(467, 64);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(338, 52);
+            this.label1.Size = new System.Drawing.Size(430, 63);
             this.label1.TabIndex = 27;
             this.label1.Text = "Configuraciones";
             // 
@@ -89,9 +93,10 @@ namespace prj_Presentacion
             this.BtnPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnPerson.ForeColor = System.Drawing.Color.White;
             this.BtnPerson.Image = global::prj_Presentacion.Properties.Resources.clients;
-            this.BtnPerson.Location = new System.Drawing.Point(359, 327);
+            this.BtnPerson.Location = new System.Drawing.Point(479, 402);
+            this.BtnPerson.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnPerson.Name = "BtnPerson";
-            this.BtnPerson.Size = new System.Drawing.Size(277, 166);
+            this.BtnPerson.Size = new System.Drawing.Size(369, 204);
             this.BtnPerson.TabIndex = 29;
             this.BtnPerson.Text = "Personas";
             this.BtnPerson.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -109,9 +114,10 @@ namespace prj_Presentacion
             this.BtnArticle.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnArticle.ForeColor = System.Drawing.Color.White;
             this.BtnArticle.Image = global::prj_Presentacion.Properties.Resources.articles;
-            this.BtnArticle.Location = new System.Drawing.Point(527, 124);
+            this.BtnArticle.Location = new System.Drawing.Point(703, 153);
+            this.BtnArticle.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnArticle.Name = "BtnArticle";
-            this.BtnArticle.Size = new System.Drawing.Size(277, 166);
+            this.BtnArticle.Size = new System.Drawing.Size(369, 204);
             this.BtnArticle.TabIndex = 28;
             this.BtnArticle.Text = "Articulos";
             this.BtnArticle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -129,9 +135,10 @@ namespace prj_Presentacion
             this.BtnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnUsers.ForeColor = System.Drawing.Color.White;
             this.BtnUsers.Image = global::prj_Presentacion.Properties.Resources.users;
-            this.BtnUsers.Location = new System.Drawing.Point(192, 124);
+            this.BtnUsers.Location = new System.Drawing.Point(256, 153);
+            this.BtnUsers.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BtnUsers.Name = "BtnUsers";
-            this.BtnUsers.Size = new System.Drawing.Size(277, 166);
+            this.BtnUsers.Size = new System.Drawing.Size(369, 204);
             this.BtnUsers.TabIndex = 26;
             this.BtnUsers.Text = "Usuarios";
             this.BtnUsers.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -149,9 +156,10 @@ namespace prj_Presentacion
             this.backButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.backButton.ForeColor = System.Drawing.Color.Black;
             this.backButton.Image = global::prj_Presentacion.Properties.Resources.backArrow_64;
-            this.backButton.Location = new System.Drawing.Point(55, 52);
+            this.backButton.Location = new System.Drawing.Point(73, 64);
+            this.backButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(62, 52);
+            this.backButton.Size = new System.Drawing.Size(83, 64);
             this.backButton.TabIndex = 25;
             this.backButton.UseVisualStyleBackColor = false;
             this.backButton.Click += new System.EventHandler(this.backButton_Click);
@@ -168,9 +176,10 @@ namespace prj_Presentacion
             this.logOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.logOutButton.ForeColor = System.Drawing.Color.Black;
             this.logOutButton.Image = global::prj_Presentacion.Properties.Resources.logout_32;
-            this.logOutButton.Location = new System.Drawing.Point(926, 3);
+            this.logOutButton.Location = new System.Drawing.Point(1235, 4);
+            this.logOutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.logOutButton.Name = "logOutButton";
-            this.logOutButton.Size = new System.Drawing.Size(49, 37);
+            this.logOutButton.Size = new System.Drawing.Size(65, 46);
             this.logOutButton.TabIndex = 24;
             this.logOutButton.UseVisualStyleBackColor = false;
             // 
@@ -178,9 +187,10 @@ namespace prj_Presentacion
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 539);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 663);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(987, 37);
+            this.pictureBox3.Size = new System.Drawing.Size(1316, 46);
             this.pictureBox3.TabIndex = 22;
             this.pictureBox3.TabStop = false;
             // 
@@ -189,17 +199,18 @@ namespace prj_Presentacion
             this.pictureBox2.BackColor = System.Drawing.Color.Black;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(987, 46);
+            this.pictureBox2.Size = new System.Drawing.Size(1316, 57);
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
             // 
             // Settings
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(987, 576);
+            this.ClientSize = new System.Drawing.Size(1316, 709);
             this.Controls.Add(this.BtnPerson);
             this.Controls.Add(this.BtnArticle);
             this.Controls.Add(this.label1);
@@ -210,6 +221,8 @@ namespace prj_Presentacion
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Settings";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Settings";
