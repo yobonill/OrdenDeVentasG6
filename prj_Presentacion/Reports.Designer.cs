@@ -30,6 +30,7 @@ namespace prj_Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
@@ -38,13 +39,6 @@ namespace prj_Presentacion
             this.BtnLimpiar = new System.Windows.Forms.Button();
             this.BtnBuscar = new System.Windows.Forms.Button();
             this.datalistadoarticulos = new System.Windows.Forms.DataGridView();
-            this.idarticuloDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechahoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.facturasBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.datSistema = new prj_Presentacion.DatSistema();
             this.label1 = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
@@ -53,19 +47,27 @@ namespace prj_Presentacion
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.datSistema = new prj_Presentacion.DatSistema();
             this.facturasTableAdapter = new prj_Presentacion.DatSistemaTableAdapters.facturasTableAdapter();
+            this.datSistema1 = new prj_Presentacion.DatSistema();
+            this.facturasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idfacturaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreClienteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totalDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datSistema)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datSistema)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datSistema1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(484, 17);
+            this.label7.Location = new System.Drawing.Point(448, 17);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(103, 17);
@@ -76,7 +78,7 @@ namespace prj_Presentacion
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(213, 17);
+            this.label8.Location = new System.Drawing.Point(177, 17);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(104, 17);
@@ -86,18 +88,18 @@ namespace prj_Presentacion
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(590, 16);
+            this.dateTimePicker2.Location = new System.Drawing.Point(554, 16);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(110, 22);
+            this.dateTimePicker2.Size = new System.Drawing.Size(110, 20);
             this.dateTimePicker2.TabIndex = 12;
             this.dateTimePicker2.Value = new System.DateTime(2021, 6, 11, 13, 49, 55, 0);
             // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(321, 16);
+            this.dateTimePicker1.Location = new System.Drawing.Point(285, 16);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(110, 22);
+            this.dateTimePicker1.Size = new System.Drawing.Size(110, 20);
             this.dateTimePicker1.TabIndex = 11;
             // 
             // button1
@@ -108,12 +110,13 @@ namespace prj_Presentacion
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Image = global::prj_Presentacion.Properties.Resources.print_48;
-            this.button1.Location = new System.Drawing.Point(875, -2);
+            this.button1.Location = new System.Drawing.Point(451, 137);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(63, 46);
             this.button1.TabIndex = 10;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // BtnLimpiar
             // 
@@ -123,7 +126,7 @@ namespace prj_Presentacion
             this.BtnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
             this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLimpiar.Image = global::prj_Presentacion.Properties.Resources.brush_32;
-            this.BtnLimpiar.Location = new System.Drawing.Point(822, 9);
+            this.BtnLimpiar.Location = new System.Drawing.Point(786, 9);
             this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnLimpiar.Name = "BtnLimpiar";
             this.BtnLimpiar.Size = new System.Drawing.Size(37, 27);
@@ -139,7 +142,7 @@ namespace prj_Presentacion
             this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
             this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnBuscar.Image = global::prj_Presentacion.Properties.Resources.search_32;
-            this.BtnBuscar.Location = new System.Drawing.Point(776, 9);
+            this.BtnBuscar.Location = new System.Drawing.Point(740, 9);
             this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBuscar.Name = "BtnBuscar";
             this.BtnBuscar.Size = new System.Drawing.Size(37, 27);
@@ -154,16 +157,27 @@ namespace prj_Presentacion
             this.datalistadoarticulos.AllowUserToOrderColumns = true;
             this.datalistadoarticulos.AllowUserToResizeColumns = false;
             this.datalistadoarticulos.AllowUserToResizeRows = false;
+            this.datalistadoarticulos.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.datalistadoarticulos.AutoGenerateColumns = false;
+            this.datalistadoarticulos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.datalistadoarticulos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.datalistadoarticulos.BackgroundColor = System.Drawing.Color.White;
+            this.datalistadoarticulos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ControlDark;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.datalistadoarticulos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.datalistadoarticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.datalistadoarticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idarticuloDataGridViewTextBoxColumn,
-            this.fechahoraDataGridViewTextBoxColumn,
-            this.cantidadDataGridViewTextBoxColumn,
-            this.precioDataGridViewTextBoxColumn,
+            this.idfacturaDataGridViewTextBoxColumn,
+            this.fechaDataGridViewTextBoxColumn,
+            this.nombreClienteDataGridViewTextBoxColumn,
             this.totalDataGridViewTextBoxColumn});
-            this.datalistadoarticulos.DataSource = this.facturasBindingSource1;
+            this.datalistadoarticulos.DataSource = this.facturasBindingSource;
             this.datalistadoarticulos.Location = new System.Drawing.Point(17, 187);
             this.datalistadoarticulos.Margin = new System.Windows.Forms.Padding(2);
             this.datalistadoarticulos.Name = "datalistadoarticulos";
@@ -172,46 +186,6 @@ namespace prj_Presentacion
             this.datalistadoarticulos.RowTemplate.Height = 24;
             this.datalistadoarticulos.Size = new System.Drawing.Size(947, 347);
             this.datalistadoarticulos.TabIndex = 74;
-            // 
-            // idarticuloDataGridViewTextBoxColumn
-            // 
-            this.idarticuloDataGridViewTextBoxColumn.DataPropertyName = "idarticulo";
-            this.idarticuloDataGridViewTextBoxColumn.HeaderText = "idarticulo";
-            this.idarticuloDataGridViewTextBoxColumn.Name = "idarticuloDataGridViewTextBoxColumn";
-            // 
-            // fechahoraDataGridViewTextBoxColumn
-            // 
-            this.fechahoraDataGridViewTextBoxColumn.DataPropertyName = "fecha_hora";
-            this.fechahoraDataGridViewTextBoxColumn.HeaderText = "fecha_hora";
-            this.fechahoraDataGridViewTextBoxColumn.Name = "fechahoraDataGridViewTextBoxColumn";
-            // 
-            // cantidadDataGridViewTextBoxColumn
-            // 
-            this.cantidadDataGridViewTextBoxColumn.DataPropertyName = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.HeaderText = "cantidad";
-            this.cantidadDataGridViewTextBoxColumn.Name = "cantidadDataGridViewTextBoxColumn";
-            // 
-            // precioDataGridViewTextBoxColumn
-            // 
-            this.precioDataGridViewTextBoxColumn.DataPropertyName = "precio";
-            this.precioDataGridViewTextBoxColumn.HeaderText = "precio";
-            this.precioDataGridViewTextBoxColumn.Name = "precioDataGridViewTextBoxColumn";
-            // 
-            // totalDataGridViewTextBoxColumn
-            // 
-            this.totalDataGridViewTextBoxColumn.DataPropertyName = "total";
-            this.totalDataGridViewTextBoxColumn.HeaderText = "total";
-            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
-            // 
-            // facturasBindingSource1
-            // 
-            this.facturasBindingSource1.DataMember = "facturas";
-            this.facturasBindingSource1.DataSource = this.datSistema;
-            // 
-            // datSistema
-            // 
-            this.datSistema.DataSetName = "DatSistema";
-            this.datSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -324,9 +298,50 @@ namespace prj_Presentacion
             this.pictureBox2.TabIndex = 77;
             this.pictureBox2.TabStop = false;
             // 
+            // datSistema
+            // 
+            this.datSistema.DataSetName = "DatSistema";
+            this.datSistema.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // facturasTableAdapter
             // 
             this.facturasTableAdapter.ClearBeforeFill = true;
+            // 
+            // datSistema1
+            // 
+            this.datSistema1.DataSetName = "DatSistema";
+            this.datSistema1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // facturasBindingSource
+            // 
+            this.facturasBindingSource.DataMember = "facturas";
+            this.facturasBindingSource.DataSource = this.datSistema1;
+            // 
+            // idfacturaDataGridViewTextBoxColumn
+            // 
+            this.idfacturaDataGridViewTextBoxColumn.DataPropertyName = "idfactura";
+            this.idfacturaDataGridViewTextBoxColumn.HeaderText = "idfactura";
+            this.idfacturaDataGridViewTextBoxColumn.Name = "idfacturaDataGridViewTextBoxColumn";
+            this.idfacturaDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // fechaDataGridViewTextBoxColumn
+            // 
+            this.fechaDataGridViewTextBoxColumn.DataPropertyName = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.HeaderText = "Fecha";
+            this.fechaDataGridViewTextBoxColumn.Name = "fechaDataGridViewTextBoxColumn";
+            // 
+            // nombreClienteDataGridViewTextBoxColumn
+            // 
+            this.nombreClienteDataGridViewTextBoxColumn.DataPropertyName = "NombreCliente";
+            this.nombreClienteDataGridViewTextBoxColumn.HeaderText = "NombreCliente";
+            this.nombreClienteDataGridViewTextBoxColumn.Name = "nombreClienteDataGridViewTextBoxColumn";
+            // 
+            // totalDataGridViewTextBoxColumn
+            // 
+            this.totalDataGridViewTextBoxColumn.DataPropertyName = "Total";
+            this.totalDataGridViewTextBoxColumn.HeaderText = "Total";
+            this.totalDataGridViewTextBoxColumn.Name = "totalDataGridViewTextBoxColumn";
+            this.totalDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Reports
             // 
@@ -342,10 +357,10 @@ namespace prj_Presentacion
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.BtnLimpiar);
             this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.label7);
@@ -355,10 +370,11 @@ namespace prj_Presentacion
             this.Text = "Reports";
             this.Load += new System.EventHandler(this.Reports_Load);
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.datSistema)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datSistema)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.datSistema1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.facturasBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -391,14 +407,14 @@ namespace prj_Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn estadoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iddetalleventaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn descuentoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.BindingSource facturasBindingSource1;
         private DatSistemaTableAdapters.facturasTableAdapter facturasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn idventaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn idventa1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idarticuloDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn fechahoraDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cantidadDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precioDataGridViewTextBoxColumn;
+        private DatSistema datSistema1;
+        private System.Windows.Forms.BindingSource facturasBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idfacturaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fechaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombreClienteDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn totalDataGridViewTextBoxColumn;
     }
 }

@@ -30,8 +30,6 @@ namespace prj_Presentacion {
         
         private facturasDataTable tablefacturas;
         
-        private global::System.Data.DataRelation relationFK_IDARTICULO;
-        
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -244,7 +242,6 @@ namespace prj_Presentacion {
                     this.tablefacturas.InitVars();
                 }
             }
-            this.relationFK_IDARTICULO = this.Relations["FK_IDARTICULO"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -261,10 +258,6 @@ namespace prj_Presentacion {
             base.Tables.Add(this.tablepersona);
             this.tablefacturas = new facturasDataTable();
             base.Tables.Add(this.tablefacturas);
-            this.relationFK_IDARTICULO = new global::System.Data.DataRelation("FK_IDARTICULO", new global::System.Data.DataColumn[] {
-                        this.tablearticulo.idarticuloColumn}, new global::System.Data.DataColumn[] {
-                        this.tablefacturas.idarticuloColumn}, false);
-            this.Relations.Add(this.relationFK_IDARTICULO);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1092,17 +1085,13 @@ namespace prj_Presentacion {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class facturasDataTable : global::System.Data.TypedTableBase<facturasRow> {
             
-            private global::System.Data.DataColumn columnidarticulo;
+            private global::System.Data.DataColumn columnidfactura;
             
-            private global::System.Data.DataColumn columnfecha_hora;
+            private global::System.Data.DataColumn columnFecha;
             
-            private global::System.Data.DataColumn columncantidad;
+            private global::System.Data.DataColumn columnNombreCliente;
             
-            private global::System.Data.DataColumn columnprecio;
-            
-            private global::System.Data.DataColumn columntotal;
-            
-            private global::System.Data.DataColumn columnidventa;
+            private global::System.Data.DataColumn columnTotal;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
@@ -1139,49 +1128,33 @@ namespace prj_Presentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idarticuloColumn {
+            public global::System.Data.DataColumn idfacturaColumn {
                 get {
-                    return this.columnidarticulo;
+                    return this.columnidfactura;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn fecha_horaColumn {
+            public global::System.Data.DataColumn FechaColumn {
                 get {
-                    return this.columnfecha_hora;
+                    return this.columnFecha;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cantidadColumn {
+            public global::System.Data.DataColumn NombreClienteColumn {
                 get {
-                    return this.columncantidad;
+                    return this.columnNombreCliente;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn precioColumn {
+            public global::System.Data.DataColumn TotalColumn {
                 get {
-                    return this.columnprecio;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn totalColumn {
-                get {
-                    return this.columntotal;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn idventaColumn {
-                get {
-                    return this.columnidventa;
+                    return this.columnTotal;
                 }
             }
             
@@ -1222,18 +1195,13 @@ namespace prj_Presentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public facturasRow AddfacturasRow(articuloRow parentarticuloRowByFK_IDARTICULO, System.DateTime fecha_hora, int cantidad, decimal precio, decimal total) {
+            public facturasRow AddfacturasRow(System.DateTime Fecha, string NombreCliente, decimal Total) {
                 facturasRow rowfacturasRow = ((facturasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        fecha_hora,
-                        cantidad,
-                        precio,
-                        total,
-                        null};
-                if ((parentarticuloRowByFK_IDARTICULO != null)) {
-                    columnValuesArray[0] = parentarticuloRowByFK_IDARTICULO[0];
-                }
+                        Fecha,
+                        NombreCliente,
+                        Total};
                 rowfacturasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowfacturasRow);
                 return rowfacturasRow;
@@ -1241,9 +1209,9 @@ namespace prj_Presentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public facturasRow FindByidventa(int idventa) {
+            public facturasRow FindByidfactura(int idfactura) {
                 return ((facturasRow)(this.Rows.Find(new object[] {
-                            idventa})));
+                            idfactura})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1263,42 +1231,34 @@ namespace prj_Presentacion {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnidarticulo = base.Columns["idarticulo"];
-                this.columnfecha_hora = base.Columns["fecha_hora"];
-                this.columncantidad = base.Columns["cantidad"];
-                this.columnprecio = base.Columns["precio"];
-                this.columntotal = base.Columns["total"];
-                this.columnidventa = base.Columns["idventa"];
+                this.columnidfactura = base.Columns["idfactura"];
+                this.columnFecha = base.Columns["Fecha"];
+                this.columnNombreCliente = base.Columns["NombreCliente"];
+                this.columnTotal = base.Columns["Total"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnidarticulo = new global::System.Data.DataColumn("idarticulo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidarticulo);
-                this.columnfecha_hora = new global::System.Data.DataColumn("fecha_hora", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnfecha_hora);
-                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncantidad);
-                this.columnprecio = new global::System.Data.DataColumn("precio", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnprecio);
-                this.columntotal = new global::System.Data.DataColumn("total", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntotal);
-                this.columnidventa = new global::System.Data.DataColumn("idventa", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnidventa);
+                this.columnidfactura = new global::System.Data.DataColumn("idfactura", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnidfactura);
+                this.columnFecha = new global::System.Data.DataColumn("Fecha", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFecha);
+                this.columnNombreCliente = new global::System.Data.DataColumn("NombreCliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNombreCliente);
+                this.columnTotal = new global::System.Data.DataColumn("Total", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTotal);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnidventa}, true));
-                this.columnidarticulo.AllowDBNull = false;
-                this.columnfecha_hora.AllowDBNull = false;
-                this.columncantidad.AllowDBNull = false;
-                this.columnprecio.AllowDBNull = false;
-                this.columntotal.AllowDBNull = false;
-                this.columnidventa.AutoIncrement = true;
-                this.columnidventa.AutoIncrementSeed = -1;
-                this.columnidventa.AutoIncrementStep = -1;
-                this.columnidventa.AllowDBNull = false;
-                this.columnidventa.ReadOnly = true;
-                this.columnidventa.Unique = true;
+                                this.columnidfactura}, true));
+                this.columnidfactura.AutoIncrement = true;
+                this.columnidfactura.AutoIncrementSeed = -1;
+                this.columnidfactura.AutoIncrementStep = -1;
+                this.columnidfactura.AllowDBNull = false;
+                this.columnidfactura.ReadOnly = true;
+                this.columnidfactura.Unique = true;
+                this.columnFecha.AllowDBNull = false;
+                this.columnNombreCliente.MaxLength = 100;
+                this.columnTotal.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1577,17 +1537,6 @@ namespace prj_Presentacion {
             public void SetestadoNull() {
                 this[this.tablearticulo.estadoColumn] = global::System.Convert.DBNull;
             }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public facturasRow[] GetfacturasRows() {
-                if ((this.Table.ChildRelations["FK_IDARTICULO"] == null)) {
-                    return new facturasRow[0];
-                }
-                else {
-                    return ((facturasRow[])(base.GetChildRows(this.Table.ChildRelations["FK_IDARTICULO"])));
-                }
-            }
         }
         
         /// <summary>
@@ -1794,79 +1743,80 @@ namespace prj_Presentacion {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idarticulo {
+            public int idfactura {
                 get {
-                    return ((int)(this[this.tablefacturas.idarticuloColumn]));
+                    return ((int)(this[this.tablefacturas.idfacturaColumn]));
                 }
                 set {
-                    this[this.tablefacturas.idarticuloColumn] = value;
+                    this[this.tablefacturas.idfacturaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public System.DateTime fecha_hora {
+            public System.DateTime Fecha {
                 get {
-                    return ((global::System.DateTime)(this[this.tablefacturas.fecha_horaColumn]));
+                    return ((global::System.DateTime)(this[this.tablefacturas.FechaColumn]));
                 }
                 set {
-                    this[this.tablefacturas.fecha_horaColumn] = value;
+                    this[this.tablefacturas.FechaColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int cantidad {
+            public string NombreCliente {
                 get {
-                    return ((int)(this[this.tablefacturas.cantidadColumn]));
+                    try {
+                        return ((string)(this[this.tablefacturas.NombreClienteColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'NombreCliente\' in table \'facturas\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablefacturas.cantidadColumn] = value;
+                    this[this.tablefacturas.NombreClienteColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal precio {
+            public decimal Total {
                 get {
-                    return ((decimal)(this[this.tablefacturas.precioColumn]));
+                    try {
+                        return ((decimal)(this[this.tablefacturas.TotalColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Total\' in table \'facturas\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablefacturas.precioColumn] = value;
+                    this[this.tablefacturas.TotalColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public decimal total {
-                get {
-                    return ((decimal)(this[this.tablefacturas.totalColumn]));
-                }
-                set {
-                    this[this.tablefacturas.totalColumn] = value;
-                }
+            public bool IsNombreClienteNull() {
+                return this.IsNull(this.tablefacturas.NombreClienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int idventa {
-                get {
-                    return ((int)(this[this.tablefacturas.idventaColumn]));
-                }
-                set {
-                    this[this.tablefacturas.idventaColumn] = value;
-                }
+            public void SetNombreClienteNull() {
+                this[this.tablefacturas.NombreClienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public articuloRow articuloRow {
-                get {
-                    return ((articuloRow)(this.GetParentRow(this.Table.ParentRelations["FK_IDARTICULO"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_IDARTICULO"]);
-                }
+            public bool IsTotalNull() {
+                return this.IsNull(this.tablefacturas.TotalColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTotalNull() {
+                this[this.tablefacturas.TotalColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2172,7 +2122,7 @@ SELECT idarticulo, idcategoria, codigo, nombre, precio_venta, stock, descripcion
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "select * from articulo";
+            this._commandCollection[0].CommandText = "select * from articulo where stock > 0";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -3097,12 +3047,10 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "facturas";
-            tableMapping.ColumnMappings.Add("idarticulo", "idarticulo");
-            tableMapping.ColumnMappings.Add("fecha_hora", "fecha_hora");
-            tableMapping.ColumnMappings.Add("cantidad", "cantidad");
-            tableMapping.ColumnMappings.Add("precio", "precio");
-            tableMapping.ColumnMappings.Add("total", "total");
-            tableMapping.ColumnMappings.Add("idventa", "idventa");
+            tableMapping.ColumnMappings.Add("idfactura", "idfactura");
+            tableMapping.ColumnMappings.Add("Fecha", "Fecha");
+            tableMapping.ColumnMappings.Add("NombreCliente", "NombreCliente");
+            tableMapping.ColumnMappings.Add("Total", "Total");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -3119,9 +3067,11 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT venta.idventa,detalle_venta.idarticulo,venta.fecha_hora,detalle_venta.cant" +
-                "idad,detalle_venta.precio,venta.total  FROM venta \r\nINNER JOIN detalle_venta \r\nO" +
-                "N venta.idventa = detalle_venta.idventa";
+            this._commandCollection[0].CommandText = @"SELECT   venta.idventa AS idfactura, venta.fecha_hora AS Fecha, persona.nombre AS NombreCliente, SUM(venta.total) AS Total
+FROM         venta INNER JOIN
+                         detalle_venta ON venta.idventa = detalle_venta.idventa LEFT OUTER JOIN
+                         persona ON venta.idcliente = persona.idpersona
+GROUP BY venta.idventa, venta.fecha_hora, persona.nombre";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         

@@ -46,3 +46,6 @@ C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\
 C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Logica.pdb
 C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\Prj_Datos.pdb
 C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\obj\Debug\Prj_Presentacion.csproj.CopyComplete
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\itextsharp.dll
+C:\Users\Yorkn\OneDrive\Universidad\Monografico\Modulo2\Practicas\PracticaFinal\OrdenDeVentasG6\prj_Presentacion\bin\Debug\itextsharp.xml

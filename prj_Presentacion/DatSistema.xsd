@@ -45,7 +45,7 @@ SELECT idarticulo, idcategoria, codigo, nombre, precio_venta, stock, descripcion
                 </InsertCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>select * from articulo</CommandText>
+                    <CommandText>select * from articulo where stock &gt; 0</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -182,20 +182,21 @@ SELECT idpersona, tipo_persona, nombre, tipo_documento, num_documento, direccion
               <DbSource ConnectionRef="ConectarSQL (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT detalle_venta.idarticulo,venta.fecha_hora,detalle_venta.cantidad,detalle_venta.precio,venta.total  FROM venta 
-INNER JOIN detalle_venta 
-ON venta.idventa = detalle_venta.idventa</CommandText>
+                    <CommandText>SELECT   venta.idventa AS idfactura, venta.fecha_hora AS Fecha, persona.nombre AS NombreCliente, SUM(venta.total) AS Total
+FROM         venta INNER JOIN
+                         detalle_venta ON venta.idventa = detalle_venta.idventa LEFT OUTER JOIN
+                         persona ON venta.idcliente = persona.idpersona
+GROUP BY venta.idventa, venta.fecha_hora, persona.nombre</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
               </DbSource>
             </MainSource>
             <Mappings>
-              <Mapping SourceColumn="idarticulo" DataSetColumn="idarticulo" />
-              <Mapping SourceColumn="fecha_hora" DataSetColumn="fecha_hora" />
-              <Mapping SourceColumn="cantidad" DataSetColumn="cantidad" />
-              <Mapping SourceColumn="precio" DataSetColumn="precio" />
-              <Mapping SourceColumn="total" DataSetColumn="total" />
+              <Mapping SourceColumn="idfactura" DataSetColumn="idfactura" />
+              <Mapping SourceColumn="Fecha" DataSetColumn="Fecha" />
+              <Mapping SourceColumn="NombreCliente" DataSetColumn="NombreCliente" />
+              <Mapping SourceColumn="Total" DataSetColumn="Total" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -207,7 +208,7 @@ ON venta.idventa = detalle_venta.idventa</CommandText>
   <xs:element name="DatSistema" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DatSistema" msprop:Generator_UserDSName="DatSistema">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="articulo" msprop:Generator_TableClassName="articuloDataTable" msprop:Generator_TableVarName="tablearticulo" msprop:Generator_TablePropName="articulo" msprop:Generator_RowDeletingName="articuloRowDeleting" msprop:Generator_RowChangingName="articuloRowChanging" msprop:Generator_RowEvHandlerName="articuloRowChangeEventHandler" msprop:Generator_RowDeletedName="articuloRowDeleted" msprop:Generator_UserTableName="articulo" msprop:Generator_RowChangedName="articuloRowChanged" msprop:Generator_RowEvArgName="articuloRowChangeEvent" msprop:Generator_RowClassName="articuloRow">
+        <xs:element name="articulo" msprop:Generator_TableClassName="articuloDataTable" msprop:Generator_TableVarName="tablearticulo" msprop:Generator_RowChangedName="articuloRowChanged" msprop:Generator_TablePropName="articulo" msprop:Generator_RowDeletingName="articuloRowDeleting" msprop:Generator_RowChangingName="articuloRowChanging" msprop:Generator_RowEvHandlerName="articuloRowChangeEventHandler" msprop:Generator_RowDeletedName="articuloRowDeleted" msprop:Generator_RowClassName="articuloRow" msprop:Generator_UserTableName="articulo" msprop:Generator_RowEvArgName="articuloRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idarticulo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidarticulo" msprop:Generator_ColumnPropNameInRow="idarticulo" msprop:Generator_ColumnPropNameInTable="idarticuloColumn" msprop:Generator_UserColumnName="idarticulo" type="xs:int" />
@@ -239,7 +240,7 @@ ON venta.idventa = detalle_venta.idventa</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_RowClassName="personaRow" msprop:Generator_UserTableName="persona" msprop:Generator_RowEvArgName="personaRowChangeEvent">
+        <xs:element name="persona" msprop:Generator_TableClassName="personaDataTable" msprop:Generator_TableVarName="tablepersona" msprop:Generator_TablePropName="persona" msprop:Generator_RowDeletingName="personaRowDeleting" msprop:Generator_RowChangingName="personaRowChanging" msprop:Generator_RowEvHandlerName="personaRowChangeEventHandler" msprop:Generator_RowDeletedName="personaRowDeleted" msprop:Generator_UserTableName="persona" msprop:Generator_RowChangedName="personaRowChanged" msprop:Generator_RowEvArgName="personaRowChangeEvent" msprop:Generator_RowClassName="personaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idpersona" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidpersona" msprop:Generator_ColumnPropNameInRow="idpersona" msprop:Generator_ColumnPropNameInTable="idpersonaColumn" msprop:Generator_UserColumnName="idpersona" type="xs:int" />
@@ -295,14 +296,19 @@ ON venta.idventa = detalle_venta.idventa</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="facturas" msprop:Generator_TableClassName="facturasDataTable" msprop:Generator_TableVarName="tablefacturas" msprop:Generator_TablePropName="facturas" msprop:Generator_RowDeletingName="facturasRowDeleting" msprop:Generator_RowChangingName="facturasRowChanging" msprop:Generator_RowEvHandlerName="facturasRowChangeEventHandler" msprop:Generator_RowDeletedName="facturasRowDeleted" msprop:Generator_UserTableName="facturas" msprop:Generator_RowChangedName="facturasRowChanged" msprop:Generator_RowEvArgName="facturasRowChangeEvent" msprop:Generator_RowClassName="facturasRow">
+        <xs:element name="facturas" msprop:Generator_TableClassName="facturasDataTable" msprop:Generator_TableVarName="tablefacturas" msprop:Generator_RowChangedName="facturasRowChanged" msprop:Generator_TablePropName="facturas" msprop:Generator_RowDeletingName="facturasRowDeleting" msprop:Generator_RowChangingName="facturasRowChanging" msprop:Generator_RowEvHandlerName="facturasRowChangeEventHandler" msprop:Generator_RowDeletedName="facturasRowDeleted" msprop:Generator_RowClassName="facturasRow" msprop:Generator_UserTableName="facturas" msprop:Generator_RowEvArgName="facturasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="idarticulo" msprop:Generator_ColumnVarNameInTable="columnidarticulo" msprop:Generator_ColumnPropNameInRow="idarticulo" msprop:Generator_ColumnPropNameInTable="idarticuloColumn" msprop:Generator_UserColumnName="idarticulo" type="xs:int" />
-              <xs:element name="fecha_hora" msprop:Generator_ColumnVarNameInTable="columnfecha_hora" msprop:Generator_ColumnPropNameInRow="fecha_hora" msprop:Generator_ColumnPropNameInTable="fecha_horaColumn" msprop:Generator_UserColumnName="fecha_hora" type="xs:dateTime" />
-              <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:int" />
-              <xs:element name="precio" msprop:Generator_ColumnVarNameInTable="columnprecio" msprop:Generator_ColumnPropNameInRow="precio" msprop:Generator_ColumnPropNameInTable="precioColumn" msprop:Generator_UserColumnName="precio" type="xs:decimal" />
-              <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:decimal" />
+              <xs:element name="idfactura" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnidfactura" msprop:Generator_ColumnPropNameInRow="idfactura" msprop:Generator_ColumnPropNameInTable="idfacturaColumn" msprop:Generator_UserColumnName="idfactura" type="xs:int" />
+              <xs:element name="Fecha" msprop:Generator_ColumnVarNameInTable="columnFecha" msprop:Generator_ColumnPropNameInRow="Fecha" msprop:Generator_ColumnPropNameInTable="FechaColumn" msprop:Generator_UserColumnName="Fecha" type="xs:dateTime" />
+              <xs:element name="NombreCliente" msprop:Generator_ColumnVarNameInTable="columnNombreCliente" msprop:Generator_ColumnPropNameInRow="NombreCliente" msprop:Generator_ColumnPropNameInTable="NombreClienteColumn" msprop:Generator_UserColumnName="NombreCliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Total" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotal" msprop:Generator_ColumnPropNameInRow="Total" msprop:Generator_ColumnPropNameInTable="TotalColumn" msprop:Generator_UserColumnName="Total" type="xs:decimal" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -316,10 +322,9 @@ ON venta.idventa = detalle_venta.idventa</CommandText>
       <xs:selector xpath=".//mstns:persona" />
       <xs:field xpath="mstns:idpersona" />
     </xs:unique>
+    <xs:unique name="facturas_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:facturas" />
+      <xs:field xpath="mstns:idfactura" />
+    </xs:unique>
   </xs:element>
-  <xs:annotation>
-    <xs:appinfo>
-      <msdata:Relationship name="FK_IDARTICULO" msdata:parent="articulo" msdata:child="facturas" msdata:parentkey="idarticulo" msdata:childkey="idarticulo" msprop:Generator_UserChildTable="facturas" msprop:Generator_ChildPropName="GetfacturasRows" msprop:Generator_UserRelationName="FK_IDARTICULO" msprop:Generator_ParentPropName="articuloRow" msprop:Generator_RelationVarName="relationFK_IDARTICULO" msprop:Generator_UserParentTable="articulo" />
-    </xs:appinfo>
-  </xs:annotation>
 </xs:schema>

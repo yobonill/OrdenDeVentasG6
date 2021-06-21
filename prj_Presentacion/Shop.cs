@@ -258,7 +258,7 @@ namespace prj_Presentacion
                 }
  
                 RecImp.FECHA_HORA1 = Convert.ToDateTime(localDate);
-                RecImp.IMPUESTO1 = Convert.ToDecimal(itbisGeneral.ToString());
+                RecImp.IMPUESTO1 = Convert.ToDecimal(itbisGeneral);
                 RecImp.TOTAL1 = Convert.ToDecimal(totalGeneral);
                 RecImp.ESTADO1 = "Despachada";
 
@@ -282,9 +282,14 @@ namespace prj_Presentacion
                         RecImpD.CANTIDAD1 = Convert.ToInt32(Dg_Detalles.Rows[i].Cells[2].Value.ToString());
                         RecImpD.PRECIO1 = Convert.ToDouble(Tmp_precio);
                         
-                        RecImpD.DESCUENTO1 = Convert.ToDouble(txbDescuento.Text);
-    
-                        RecID.RegRecordImp(RecImpD);  //Grabar Detatalles de Factura
+                        if(i == 0) { 
+                            RecImpD.DESCUENTO1 = Convert.ToDouble(txbDescuento.Text);
+                        } else
+                        {
+                            RecImpD.DESCUENTO1 = 0;
+                        }
+
+                    RecID.RegRecordImp(RecImpD);  //Grabar Detatalles de Factura
 
                         //Rebajar Inventario de Conceptos
 
@@ -299,7 +304,10 @@ namespace prj_Presentacion
 
                     MessageBox.Show("Registro agregado con exito.", "Agregado", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
-                }
+                    this.Hide();
+                    Shop cargar = new Shop(_Usuario);
+                    cargar.ShowDialog();
+                }   
                 //}
                 //else
                 //{
