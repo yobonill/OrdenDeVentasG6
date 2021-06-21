@@ -29,6 +29,7 @@ namespace prj_Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.TxtDescripcion = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.TxtNombre = new System.Windows.Forms.TextBox();
@@ -37,17 +38,24 @@ namespace prj_Presentacion
             this.label4 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.BtnLimpiar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             this.datalistadoarticulos = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.LblTotal = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LblFecha = new System.Windows.Forms.Label();
+            this.tmrHora = new System.Windows.Forms.Timer(this.components);
+            this.tmrMensaje = new System.Windows.Forms.Timer(this.components);
+            this.tmr2click = new System.Windows.Forms.Timer(this.components);
+            this.msjdobleclick = new System.Windows.Forms.Label();
             this.backButton = new System.Windows.Forms.Button();
             this.logOutButton = new System.Windows.Forms.Button();
             this.BtnNuevo = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnCategoria = new System.Windows.Forms.Button();
-            this.BtnLimpiar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -65,6 +73,7 @@ namespace prj_Presentacion
             this.TxtDescripcion.TabIndex = 7;
             this.TxtDescripcion.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TxtDescripcion.TextChanged += new System.EventHandler(this.TxtDescripcion_TextChanged);
+            this.TxtDescripcion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDescripcion_KeyPress);
             // 
             // label5
             // 
@@ -86,6 +95,7 @@ namespace prj_Presentacion
             this.TxtNombre.Size = new System.Drawing.Size(127, 20);
             this.TxtNombre.TabIndex = 3;
             this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
+            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // label7
             // 
@@ -107,6 +117,7 @@ namespace prj_Presentacion
             this.TxtCodigo.Size = new System.Drawing.Size(77, 20);
             this.TxtCodigo.TabIndex = 1;
             this.TxtCodigo.TextChanged += new System.EventHandler(this.TxtCodigo_TextChanged);
+            this.TxtCodigo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCodigo_KeyPress);
             // 
             // label4
             // 
@@ -152,6 +163,38 @@ namespace prj_Presentacion
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // BtnLimpiar
+            // 
+            this.BtnLimpiar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnLimpiar.Image = global::prj_Presentacion.Properties.Resources.brush_32;
+            this.BtnLimpiar.Location = new System.Drawing.Point(902, 17);
+            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnLimpiar.Name = "BtnLimpiar";
+            this.BtnLimpiar.Size = new System.Drawing.Size(37, 27);
+            this.BtnLimpiar.TabIndex = 8;
+            this.BtnLimpiar.UseVisualStyleBackColor = false;
+            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.BackColor = System.Drawing.Color.MidnightBlue;
+            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
+            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
+            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBuscar.Image = global::prj_Presentacion.Properties.Resources.search_32;
+            this.BtnBuscar.Location = new System.Drawing.Point(856, 17);
+            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(37, 27);
+            this.BtnBuscar.TabIndex = 8;
+            this.BtnBuscar.UseVisualStyleBackColor = false;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
             // datalistadoarticulos
             // 
             this.datalistadoarticulos.AllowUserToAddRows = false;
@@ -167,9 +210,10 @@ namespace prj_Presentacion
             this.datalistadoarticulos.RowHeadersVisible = false;
             this.datalistadoarticulos.RowHeadersWidth = 51;
             this.datalistadoarticulos.RowTemplate.Height = 24;
-            this.datalistadoarticulos.Size = new System.Drawing.Size(855, 347);
+            this.datalistadoarticulos.Size = new System.Drawing.Size(855, 294);
             this.datalistadoarticulos.TabIndex = 50;
             this.datalistadoarticulos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoarticulos_CellContentClick);
+            this.datalistadoarticulos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.datalistadoarticulos_CellDoubleClick);
             // 
             // label1
             // 
@@ -208,6 +252,55 @@ namespace prj_Presentacion
             this.label3.TabIndex = 44;
             this.label3.Text = "Sistema de Orden de Ventas";
             this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // LblTotal
+            // 
+            this.LblTotal.AutoSize = true;
+            this.LblTotal.Location = new System.Drawing.Point(837, 500);
+            this.LblTotal.Name = "LblTotal";
+            this.LblTotal.Size = new System.Drawing.Size(35, 13);
+            this.LblTotal.TabIndex = 55;
+            this.LblTotal.Text = "label6";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(700, 500);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 13);
+            this.label6.TabIndex = 56;
+            this.label6.Text = "Total de Registro Cargado";
+            // 
+            // LblFecha
+            // 
+            this.LblFecha.AutoSize = true;
+            this.LblFecha.Location = new System.Drawing.Point(300, 23);
+            this.LblFecha.Name = "LblFecha";
+            this.LblFecha.Size = new System.Drawing.Size(35, 13);
+            this.LblFecha.TabIndex = 57;
+            this.LblFecha.Text = "label9";
+            // 
+            // tmrHora
+            // 
+            this.tmrHora.Tick += new System.EventHandler(this.tmrHora_Tick);
+            // 
+            // tmrMensaje
+            // 
+            this.tmrMensaje.Tick += new System.EventHandler(this.tmrMensaje_Tick);
+            // 
+            // tmr2click
+            // 
+            this.tmr2click.Tick += new System.EventHandler(this.tmr2click_Tick);
+            // 
+            // msjdobleclick
+            // 
+            this.msjdobleclick.AutoSize = true;
+            this.msjdobleclick.Location = new System.Drawing.Point(14, 500);
+            this.msjdobleclick.Name = "msjdobleclick";
+            this.msjdobleclick.Size = new System.Drawing.Size(171, 13);
+            this.msjdobleclick.TabIndex = 59;
+            this.msjdobleclick.Text = "Doble Click Para Mostrar Registros";
+            this.msjdobleclick.Click += new System.EventHandler(this.msjdobleclick_Click);
             // 
             // backButton
             // 
@@ -306,38 +399,6 @@ namespace prj_Presentacion
             this.BtnCategoria.UseVisualStyleBackColor = false;
             this.BtnCategoria.Click += new System.EventHandler(this.BtnCategoria_Click);
             // 
-            // BtnLimpiar
-            // 
-            this.BtnLimpiar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BtnLimpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnLimpiar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
-            this.BtnLimpiar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.BtnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnLimpiar.Image = global::prj_Presentacion.Properties.Resources.brush_32;
-            this.BtnLimpiar.Location = new System.Drawing.Point(902, 17);
-            this.BtnLimpiar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnLimpiar.Name = "BtnLimpiar";
-            this.BtnLimpiar.Size = new System.Drawing.Size(37, 27);
-            this.BtnLimpiar.TabIndex = 8;
-            this.BtnLimpiar.UseVisualStyleBackColor = false;
-            this.BtnLimpiar.Click += new System.EventHandler(this.BtnLimpiar_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.BackColor = System.Drawing.Color.MidnightBlue;
-            this.BtnBuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Aquamarine;
-            this.BtnBuscar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Navy;
-            this.BtnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnBuscar.Image = global::prj_Presentacion.Properties.Resources.search_32;
-            this.BtnBuscar.Location = new System.Drawing.Point(856, 17);
-            this.BtnBuscar.Margin = new System.Windows.Forms.Padding(2);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(37, 27);
-            this.BtnBuscar.TabIndex = 8;
-            this.BtnBuscar.UseVisualStyleBackColor = false;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Black;
@@ -366,6 +427,10 @@ namespace prj_Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(987, 576);
+            this.Controls.Add(this.msjdobleclick);
+            this.Controls.Add(this.LblFecha);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.LblTotal);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.logOutButton);
             this.Controls.Add(this.BtnNuevo);
@@ -381,6 +446,7 @@ namespace prj_Presentacion
             this.Name = "SettingsArticles";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SettingsArticles";
+            this.Load += new System.EventHandler(this.SettingsArticles_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datalistadoarticulos)).EndInit();
@@ -414,5 +480,12 @@ namespace prj_Presentacion
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label LblTotal;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LblFecha;
+        private System.Windows.Forms.Timer tmrHora;
+        private System.Windows.Forms.Timer tmrMensaje;
+        private System.Windows.Forms.Timer tmr2click;
+        private System.Windows.Forms.Label msjdobleclick;
     }
 }

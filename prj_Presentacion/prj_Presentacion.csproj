@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +62,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="categoria.Designer.cs">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatUsuario.cs">
       <DependentUpon>DatUsuario.xsd</DependentUpon>
     </Compile>
@@ -66,6 +87,18 @@
     </Compile>
     <Compile Include="mainMenu.Designer.cs">
       <DependentUpon>mainMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manarticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manarticulo.Designer.cs">
+      <DependentUpon>Manarticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mancategoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Mancategoria.Designer.cs">
+      <DependentUpon>Mancategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="MantPersona.cs">
       <SubType>Form</SubType>
@@ -129,11 +162,20 @@
     <Compile Include="Shop.Designer.cs">
       <DependentUpon>Shop.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="categoria.resx">
+      <DependentUpon>categoria.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mainMenu.resx">
       <DependentUpon>mainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manarticulo.resx">
+      <DependentUpon>Manarticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Mancategoria.resx">
+      <DependentUpon>Mancategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantPersona.resx">
       <DependentUpon>MantPersona.cs</DependentUpon>
@@ -244,6 +286,18 @@
     <None Include="Resources\mainMenu\plus_16.png" />
     <None Include="Resources\mainMenu\plus_32.png" />
     <Content Include="Resources\mainMenu\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

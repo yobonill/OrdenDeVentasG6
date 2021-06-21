@@ -19,7 +19,7 @@ namespace prj_Presentacion
             //Application.Run(new LogIn());
             //Application.Run(new mainMenu());
             //Application.Run(new Settings());
-            Application.Run(new SettingsPersonas());
+            Application.Run(new SettingsArticles());
         }
     }
 }

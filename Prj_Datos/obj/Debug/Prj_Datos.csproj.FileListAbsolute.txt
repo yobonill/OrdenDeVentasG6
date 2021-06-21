@@ -20,3 +20,14 @@ C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Dato
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.CopyComplete
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.exe
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Datos\obj\Debug\Prj_Datos.pdb
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\bin\Debug\Prj_Datos.exe
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\bin\Debug\Prj_Datos.pdb
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\bin\Debug\Prj_Entidades.exe
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\bin\Debug\Prj_Entidades.pdb
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.AssemblyReference.cache
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\obj\Debug\Prj_Datos.Properties.Resources.resources
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.GenerateResource.cache
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.CoreCompileInputs.cache
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\obj\Debug\Prj_Datos.csproj.CopyComplete
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\obj\Debug\Prj_Datos.exe
+C:\Users\POMAVID\Desktop\Joel\Prj_Datos\obj\Debug\Prj_Datos.pdb

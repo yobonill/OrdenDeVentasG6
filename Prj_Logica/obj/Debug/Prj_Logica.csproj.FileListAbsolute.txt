@@ -24,3 +24,16 @@ C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Logica\obj\Debug\Prj_Log
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Logica\obj\Debug\Prj_Logica.csproj.CopyComplete
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Logica\obj\Debug\Prj_Logica.exe
 C:\Users\Joel\Documents\GitHub\OrdenDeVentasG6\Joel\Prj_Logica\obj\Debug\Prj_Logica.pdb
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\bin\Debug\Prj_Logica.exe
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\bin\Debug\Prj_Logica.pdb
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\bin\Debug\Prj_Datos.exe
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\bin\Debug\Prj_Entidades.exe
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\bin\Debug\Prj_Datos.pdb
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\bin\Debug\Prj_Entidades.pdb
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\obj\Debug\Prj_Logica.csproj.AssemblyReference.cache
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\obj\Debug\Prj_Logica.Properties.Resources.resources
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\obj\Debug\Prj_Logica.csproj.GenerateResource.cache
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\obj\Debug\Prj_Logica.csproj.CoreCompileInputs.cache
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\obj\Debug\Prj_Logica.csproj.CopyComplete
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\obj\Debug\Prj_Logica.exe
+C:\Users\POMAVID\Desktop\Joel\Prj_Logica\obj\Debug\Prj_Logica.pdb

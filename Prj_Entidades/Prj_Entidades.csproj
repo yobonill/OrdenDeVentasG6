@@ -46,8 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EN_categoria.cs" />
     <Compile Include="EN_Persona.cs" />
     <Compile Include="EN_Rol.cs" />
+    <Compile Include="EN_articulo.cs" />
     <Compile Include="EN_Usuario.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

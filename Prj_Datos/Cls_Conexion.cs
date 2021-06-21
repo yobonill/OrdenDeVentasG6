@@ -15,7 +15,7 @@ namespace Prj_Datos
         public SqlConnection cn { get; set; }
         public static string ConectarSql()
         {
-            return @"Data Source=.\SQLEXPRESS;Initial Catalog=OrdenVentasDB; Integrated Security=True";
+            return @"Data Source= DESKTOP-4U3JA7M; Initial Catalog=OrdenVentasDB; Integrated Security=True";
         }
 
         public string cadena;
